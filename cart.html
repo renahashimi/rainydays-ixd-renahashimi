@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Rena Hashimi">
+  <meta name="description" content="Rainydays - Cart"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/product.js"></script>
+  <script type="module" src="js/cart.js"></script>
+  <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>   
+  <title>CART</title>
+</head>
+<body>
+<header> 
+  <div>
+    <input type="checkbox" id="menu-chechbox">
+    <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i>
+    </label> 
+    <nav class="nav1">
+      <div class="nav2">
+        <a href="index.html">Home</a>
+        <a href="women.html">Women</a>
+        <a href="men.html">Men</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About us</a>
+      </div>
+    </nav>      
+  </div>
+  <div>
+    <a href="index.html"><img class="headlogo" src="images/Logo/Logo.jpg" alt="Logo"></a>
+  </div>
+  <div>
+    <nav>
+      <a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a>
+      <a class="bag" href="cart.html"><i class="fa-solid fa-bag-shopping fa-2" style="color: #0a3641;"></i></a>
+    </nav>
+  </div>
+  </header>
+  <main>    
+    <input type="button" id="back" value="back" onclick="history.go(-1);"> 
+    <label for="back" class="backbutton"></label>
+   <div class="line1"></div>
+    <h1>JUST ONE STEP AWAY</h1>
+    <div class="content4">
+      <div class="box3">
+        <h2 class="os">order summary</h2>
+        <div class=container5><img class="ch-img" src="images/Jacket/flora.jpg" alt="image-checkout">
+          <div>
+            <div class="ch-text1">
+              <p>Item: Flora<span>$199,00</span></p>
+              <p>Size: M</p>
+            </div>
+            <div class="ch-text2">
+              <p>Shipping <span>$4,99</span></p>
+            </div>
+            <div class="line1"></div>
+            <div class="ch-st">sub total <span>$203,99</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="box4">
+        <h3 class="bi-text">Billing Information</h3>
+        <div class="container7">
+          <form class="ch-form">      
+            <input type="text" id="name" class=name1 placeholder="Full name" autocomplete="on" required> 
+            <input type="text" id="address" class=address1 placeholder="Address" autocomplete="on"  required>     
+            <div class="sec2">
+              <input type="number" id="number" class=code1 placeholder="Postal code"  required>
+              <input type="text" id="text" name="city" class=city1 placeholder="City"  required>
+            </div>
+          </form>
+        </div>
+        <div class="box5">
+          <h3 class="bi-text">Creditcard Information</h3>
+          <div class="container8">
+            <form class="ch-form2">      
+              <input type="number" id="credit"  class=creditnr placeholder="Creditcard Information" required> 
+              <div class="sec3">
+                <input type="number" id="mount" class=mount placeholder="Mount"  required>     
+                <input type="number" id="year" class=year placeholder="Year"  required>
+                <input type="number" id="cvv" class=cvv placeholder="Cvv"  required>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="ch-form3"> 
+          <div class="w-a"><p>We Accept</p></div>
+          <div class="pay-logo">
+            <div class="content5"><i class="fa-brands fa-cc-visa" style="color: #0a3641;"></i></div>
+            <div class="content5"><i class="fa-brands fa-cc-mastercard" style="color: #0a3641;"></i></div>
+            <div class="content5"><i class="fa-brands fa-cc-amex" style="color: #0a3641;"></i></div>
+            <div class="content5"><i class="fa-brands fa-cc-paypal" style="color: #0a3641;"></i></div>
+          </div>
+          <div><button class="ch-button" type="submit"><a href="success.html">CHECKOUT</a></button></div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footline"></div>
+    <div class="footer-x">
+      <div class="foot1">
+        <p class="foot-x">rainydays</p>
+        <p>About us</p>
+        <p>My account</p>
+        <p>Shipping info</p>
+        <p>Find a store</p>
+      </div>
+      <div class="foot1">
+        <p class="foot-x">help</p>
+        <p>Terms & conditions</p>
+        <p>Contact us</p>
+        <p>Order status</p>
+        <p>Delivery & return</p>
+      </div>
+      <div class="foot1">
+        <p class="foot-x">information</p>
+        <p>Careers</p>
+        <p>Press</p>
+        <p>Business</p>
+      </div>
+      <div class="logos">
+        <div> 
+          <img class="footlogo" src="images/Logo/Logo.jpg" alt="Logo">
+        </div>
+        <div class="foot-logo">
+          <div class="foot-content"><i class="fa-brands fa-square-instagram" style="color: #0a3641;"></i></div>
+          <div class="foot-content"><i class="fa-brands fa-square-facebook" style="color: #0a3641;"></i></div>
+          <div class="foot-content"><i class="fa-brands fa-square-twitter" style="color: #0a3641;"></i></div>  
+        </div> 
+        <p class="foot-lname">@rainydays</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
