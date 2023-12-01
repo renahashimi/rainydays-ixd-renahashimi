@@ -66,6 +66,7 @@ body header {
     grid-template-columns: 80px 1fr auto;
     position: fixed;
     width: 100%;
+    max-width: 1050px;
     height: 95px;
     margin: -100px auto 0 -20px;
     padding: 0 15px;
@@ -1389,7 +1390,6 @@ h1 {
     
 body header {
     grid-template-columns: auto auto 120px;
-    max-width: 1050px;
     min-height: 110px;
     padding-right: 30px;
 }
