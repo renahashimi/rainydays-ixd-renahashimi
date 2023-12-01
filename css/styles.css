@@ -1391,7 +1391,6 @@ h1 {
 body header {
     grid-template-columns: auto auto 120px;
     min-height: 110px;
-    padding-right: 30px;
 }
 
 .headlogo1 {
