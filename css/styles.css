@@ -1377,7 +1377,7 @@ body header {
     display: grid;
     margin: -125px auto;
     height: 90px;
-    padding-left: 8px;
+    padding-left: 10px;
 }
 
 h1 {
