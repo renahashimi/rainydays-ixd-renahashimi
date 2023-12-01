@@ -6,10 +6,6 @@
     --white: #fff;
     --red: red;
 }
-font-family: 'Caveat', cursive;
-font-family: 'Indie Flower', cursive;
-font-family: 'The Girl Next Door', cursive;
-
 
 *, *::after, *::before {
     box-sizing: border-box;
