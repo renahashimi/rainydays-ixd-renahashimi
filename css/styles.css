@@ -68,8 +68,8 @@ body header {
     width: 100%;
     max-width: 1100px;
     height: 95px;
-    margin: -100px auto 0 -20px;
-    padding: 0 15px;
+    margin: -100px -7px;
+    padding: 0 25px;
     background-color: var(--white);
     border-bottom: 1px solid var(--green);
     z-index: 2;
@@ -1061,11 +1061,6 @@ h1 {
 
 /*Header*/    
 
-body header {
-    margin: -100px -20px;
-  
-}
-
 .headlogo {
     min-width: 110px;
     margin-top: 20px;
@@ -1374,6 +1369,7 @@ body main {
 } 
 
 body header {
+    grid-template-columns: auto 750px auto;
     margin: -125px auto;
     height: 110px;
     max-width: 1125px;
@@ -1415,7 +1411,7 @@ h1 {
     display: flex;
     flex-direction: row;
     border: none;
-    margin: -60px 150px;
+    margin: -60px 200px;
     width: 700px; 
     padding: 0 10px;
     background-color: transparent;
@@ -1439,6 +1435,10 @@ h1 {
 
 .nav2 a:hover {
     font-weight: 700;
+}
+
+.bag, .profile {
+    margin-top: 15px;
 }
 
 
