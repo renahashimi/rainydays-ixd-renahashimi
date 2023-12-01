@@ -1389,7 +1389,7 @@ h1 {
     
 body header {
     grid-template-columns: auto auto 120px;
-    max-width: 1100px;
+    max-width: 1050px;
     min-height: 110px;
     padding-right: 30px;
 }
@@ -1841,90 +1841,3 @@ footer {
 }
 
 }
-
-
-@media only screen and (min-width: 1600px) {
-
-/*Header*/
-
-header {
-    height: 120px;
-    margin: 0 auto -20px;
-}
-
-.fa-2x {
-    font-size: 2.4em;
-}
-
-.nav1 li { 
-    font-size: 2em;
-}
-
-
-/*Index - Home*/
-
-.na-x2 {
-    max-width: 70%;
-}
-
-.women, .men {
-    margin: 120px 70px;
-    padding: 30px;
-}   
-
-
-/*About us*/
-
-.ab-content {
-    max-width: 90%;
-    margin: auto;
-}
-
-.p3 {
-    width: 100%;
-}
-
-.img4 {
-    max-width: 550px;
-}
-
-.logo4, .p4 {
-    margin-left: 100px;
-}
-
-
-
-/*Success*/
-
-.success1 {
-    width: 70%;
-    margin: auto;
-}
-
-
-/*Footer*/
-
-.footline {
-    margin-bottom: 40px;
-}
-
-.footer-x {
-    width: 80%;
-    margin: auto;
-    font-size: 1em;
-}
-
-.footlogo {
-    width: 160px;
-}
-
-.foot-lname {
-    margin-top: -60px;
-}
-}
-
-
-
-
-    
-
