@@ -1,5 +1,7 @@
 :root {
     --green: #0A3641;
+    --white: #fff;
+    --red: red;
 }
 
 /*All new CSS for JS1 ca. */
@@ -44,7 +46,7 @@
     display: block;
     width: max-content;
     font-size: 1.2em;
-    color: red;
+    color: var(--red);
     padding: 1.5rem;
     margin: 30px auto;
     grid-column-end: span 3;
@@ -59,26 +61,31 @@
     margin: 10px auto;
     width: 95%;
     max-width: 220px;
-    padding-bottom: 20PX;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 35)
 }
  
 .productMen, .productWoman {
     display: flex;
+    color: var(--white);
     letter-spacing: 0.5em;
     font-weight: bolder;
     margin: 20px auto;
     text-align: center;
     padding-bottom: 20px;
+    background-color: var(--green);
 }
 
-.productSection {
+.productSection, .productSectionMen {
     display: grid;
     grid-template-columns: 49% 49%;
     justify-content: center;
     text-align: center;
     color: var(--green);
+    padding-bottom: 30px;
 }
- 
+
 .jacketContainer, .jacketContainer a {
     font-size: 1em;
     color: var(--green);
@@ -101,7 +108,7 @@
     background-position: center;
     background-size: contain;
     min-width: 90%;
-    min-height: 120px;
+    min-height: 160px;
     margin: 30px auto;
 }
  
@@ -121,6 +128,7 @@
     text-align: center;
     border: 1px solid #0A3641;  
     border-radius: 6px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.35)
 }
 
 .bnBox {
@@ -137,17 +145,18 @@
  
 .productName {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 20px auto 0;
+    margin: 10px auto 0;
     font-size: 1em;
 }
  
 .productImage2 {
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 90%;
     max-width: 230px;
-    min-height: 250px;
-    margin: 20px auto 0;
+    min-height: 200px;
+    margin: -40px auto;
 }
  
 .productInfo {
@@ -163,7 +172,7 @@
     display: block;
     max-width: 300px;
     text-align: center;
-    margin: 0 auto 30px;
+    margin: -20px auto 30px;
     padding: 10px 20px;
     color: var(--green);
     font-size: 0.7em;  
@@ -175,11 +184,15 @@
     padding-top: 20px;
 }
 
+.saleprice {
+    display: block;
+}
+
 .saleText {
     display: block;
     margin: 30px auto -10px;
     color: red;
-    padding: 10px 5px;
+    padding: 10px 20px;
     text-align: center;
     border-top: 1px dotted var(--green);   
 }
@@ -198,7 +211,7 @@
     font-weight: 400;
     text-transform: uppercase;    
     letter-spacing: 0.2em;
-    margin: -20 auto 20px;
+    margin-top: 40px;
 }
 
 .properties span {
@@ -256,7 +269,7 @@ select {
     margin-bottom: 30px;
 }
  
-#atc, .atcbtn {
+#atc, #gtc, .atcbtn {
     display: block;
     border: 1px solid var(--green);
     color: var(--green);
@@ -272,19 +285,85 @@ select {
  
 .backbutton {
     font-size: small;
-    margin: 10px 20px 10px 0;
+    margin: 10px 5px;
+    padding: 10px 0;
     text-decoration: underline;
 }
+
+.actionButton {
+    display: block;
+}
  
+
+/*JACKET YOU MAY LIKE*/
+
+
+.likesection {
+    display: block;
+    background-color: var(--green);
+    color: var(--white);
+    margin: 0 auto 0;
+    padding-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+.liketitle {
+    font-size: 0.8em;
+    padding: 30px 0 5px;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-top: 20px double var(--white);
+}
+
+.productsyoumaylike {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    max-width: 500px;
+    justify-content: space-evenly;
+    margin: auto;
+    background-color: var(--white);
+}
+
+.likeInfo {
+    display: block;
+    background-color: var(--white);
+    border: 1px solid var(--green);
+    margin: 10px auto;
+    width: 90%;
+}
+
+.likename {
+    color: var(--green);
+}
+
+.likeImage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 90px;
+    margin: 15px auto;
+    background-position: center;
+}
+
+.likePrice {
+    color: var(--green);
+    margin: 5px auto;
+}
+ 
+
+
 @media only screen and (min-width: 390px) and (max-width: 569px) {
  
 
 .selectbox {
     display: flex;
+    width: 400px;
+    margin: auto;
 }
 
 #atc {
-    margin: 35px; 
+    margin: 37px; 
 }
 }
  
@@ -304,13 +383,19 @@ select {
     padding: 5px;
 }
                                                        
-.productSection {
+.productSection, .productSectionMen {
     display: grid;
     grid-template-columns: repeat(3,auto);
 }
 
 
 /*Product (PRODUCTPAGE)*/
+
+
+.productContent {
+    border: none;
+    border-top: 6px double var(--green);
+}
 
 .productImage2 {
     width: 250px;
@@ -325,12 +410,13 @@ select {
 .properties {
     max-width: 500px;
     font-size: 0.7em;
-    margin: -30px auto 0;
+    margin: 50px auto 0;
 }
 
 .selectbox {
     display: flex;
-    margin: 0 90px;
+    width: 500px;
+    margin: 0 auto;
 }
 }
 
@@ -344,7 +430,7 @@ select {
     margin: 7px;
 }
 
-.productSection {
+.productSection, .productSectionMen {
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
@@ -353,16 +439,20 @@ select {
 /*Product (PRODUCTPAGE)*/
 
 .productContent {
-    display: grid;
+    display: block;
     grid-template-columns: repeat(3, auto);
     margin: 10px auto;
     border: none;
-    border-top: 2px double var(--green);
+    border-top: 5px double var(--green);
+}
+
+#productSection {
+    display: flex;
 }
 
 .productName {
     font-size: 1.2em;
-    margin: 30px auto;
+    margin: 30px auto -80px;
 }
 
 #productName {
@@ -372,7 +462,7 @@ select {
 .productImage2 {
     min-width: 280px;
     min-height: 350px;
-    margin: 30px 0 0 50px;
+    margin: 0 0 0 50px;
 }
 
 .productInfo {
@@ -387,6 +477,9 @@ select {
     margin: 0 auto 0;
 }
 
+.productDetail {
+    margin-top: 20px;
+}
 .selectbox {
     display: flex;
     margin: 0 90px;
@@ -397,8 +490,9 @@ select {
 }
 
 #atc {
-    margin: 35px 0 0 30px;
+    margin: 37px 0 0 30px;
 }
+
 }
 
 
@@ -409,12 +503,12 @@ select {
 
 .jacketInfo {
     width: 200px;
-    margin: 7px;
+   margin: 30px;
 }
 
-.productSection {
+.productSection, .productSectionMen {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
 }
    
 

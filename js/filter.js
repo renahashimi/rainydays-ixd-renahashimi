@@ -1,7 +1,7 @@
 // This JS is not a part of my CA - But i wanted to  try out for learning - code is only at MEN.HTML:)
 
 
-import { errorMessage } from "./errormessage.js";
+import { errorMessage } from ".js/errormessage.js";
 import { url } from "../product.js";
 
 async function getData() {  

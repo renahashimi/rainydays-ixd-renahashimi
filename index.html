@@ -7,8 +7,11 @@
     <meta name="description" content="Rainydays - the website where you find jackets that are made from the best and quality-assured materials. We have the jackets that cope with the most challenging weather."/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/product.js"></script>
+    <link rel="stylesheet" href="css/ixd.css">
+    <script type="module" src="js/index.js"></script>
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Indie+Flower&family=The+Girl+Next+Door&display=swap" rel="stylesheet">
     <!-- Hotjar Tracking Code for https://rainydays-ixd-renahashimi.netlify.app/ -->
 <script>
   (function(h,o,t,j,a,r){
@@ -25,9 +28,11 @@
 <body>
   <header>
     <div>
+      <div>
+        <a href="index.html"><img class="headlogo1" src="images/Logo/Logo.jpg" alt="Logo"></a>
+      </div>
       <input type="checkbox" id="menu-chechbox">
-      <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i>
-      </label> 
+      <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i></label> 
       <nav class="nav1">
         <div class="nav2">
           <a href="index.html">Home</a>
@@ -35,16 +40,18 @@
           <a href="men.html">Men</a>
           <a href="contact.html">Contact</a>
           <a href="about.html">About us</a>
+          <p class="navoutlet"><a href="outlet.html">Outlet</a></p>
         </div>
       </nav>   
     </div>
     <div>
       <a href="index.html"><img class="headlogo" src="images/Logo/Logo.jpg" alt="Logo"></a>
     </div>
-    <div>
+    <div class="nav4">
       <nav class="nav">
-        <div class="nav4">
-          <a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a>
+        <div><a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a></div>
+        <div>  
+          <p class="cartnumber">0</p>
           <a class="bag" href="cart.html"><i class="fa-solid fa-bag-shopping fa-2" style="color: #0a3641;"></i></a>
         </div>
       </nav>
@@ -52,24 +59,36 @@
   </header>
   <main> 
     <div class="line1"></div> 
-    <div class="container-x">
-      <div class="background1">
-        <div class="sf"><p>shop for</p></div>
-          <nav class="content-x">
-            <ol>
-              <li class="women"><a href="women.html">WOMEN</a></li>
-              <li class="men"><a href="men.html">MEN</a></li>
-            </ol> 
-          </nav>
-        </div>
-      </div>
+
+  <div class="background2">
+      <h1 class="sitename">RAINYDAYS</h1>
     </div>
-    <div class="line1"></div> 
-    <div><h1 class="na-x">NEW ARRIVALS</h1></div>
+
+      <div class="background1"><img src="images/Other/jackets.jpeg" alt="Jackets"></div>
+
+    <!--API-->
+    <div class="content-x"></div>
+    
+      <p class="raintx">We got you covored under the weather</p>
+      <img class="rainimg" src="images/Other/rain1.jpeg" alt="rain-woods">
+    </div>
     
 
+    <div class="newarrivalssection">
+      <h2 class="na-x">NEW ARRIVALS</h2>
+      <div class="newarrivalscontent"></div>
+    </div>
 
+    <div class="salesection">
+      <h2 class="saletx">sale</h2> 
+      <div class="salecontent"></div>
+      <div class="outletbn"><a href="outlet.html?id=${jacket.id}" id="outletbn">SEE ALL OUTLET</a></div> 
+    </div>
 
+    <div>
+      <p class="fishtx">"There is no such thing as bad weather, only inappropriate clothing"</p>
+      <img class="fishimg" src="images/Other/manfishing.jpeg" alt="rain-woods">
+    </div>
 
   </main>
   <footer>
@@ -88,12 +107,6 @@
         <p>Contact us</p>
         <p>Order status</p>
         <p>Delivery & return</p>
-      </div>
-      <div class="foot1">
-        <p class="foot-x">information</p>
-        <p>Careers</p>
-        <p>Press</p>
-        <p>Business</p>
       </div>
       <div class="logos">
         <div> 

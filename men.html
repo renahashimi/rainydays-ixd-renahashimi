@@ -7,6 +7,7 @@
     <meta name="description" content="Rainydays - Jackets for men"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ixd.css">
     <link rel="stylesheet" href="css/js.css">
     <script type="module" src="js/product.js"></script>
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>
@@ -26,6 +27,9 @@
 <body>
   <header>
     <div>
+      <div>
+        <a href="index.html"><img class="headlogo1" src="images/Logo/Logo.jpg" alt="Logo"></a>
+      </div>
       <input type="checkbox" id="menu-chechbox">
       <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i>
       </label> 
@@ -36,27 +40,30 @@
           <a href="men.html">Men</a>
           <a href="contact.html">Contact</a>
           <a href="about.html">About us</a>
+          <p class="navoutlet"><a href="outlet.html">Outlet</a></p>
         </div>
       </nav>    
       </div>
       <div>
         <a href="index.html"><img class="headlogo" src="images/Logo/Logo.jpg" alt="Logo"></a>
       </div>
-      <div>
-        <nav>
-          <a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a>
-          <a class="bag" href="cart.html"><i class="fa-solid fa-bag-shopping fa-2" style="color: #0a3641;"></i></a>
+      <div class="nav4">
+        <nav class="nav">
+          <div><a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a></div>
+          <div>  
+            <p class="cartnumber">0</p>
+            <a class="bag" href="cart.html"><i class="fa-solid fa-bag-shopping fa-2" style="color: #0a3641;"></i></a>
+          </div>
         </nav>
       </div>
-    </div>
   </header>
   <main>
     <!--API CALL-->
     <div class="line1"></div>
-    <h1 class="productMen">MEN</h1> <!--"MEN" is written in here, because I could not change bout "MEN" & "WOMAN" H1 in JS, without one of them disappearing-->
+    <h1 class="productMen">MEN</h1> 
     
-    <div class="productSection"></div> 
-
+    <div class="productSectionMen"></div> 
+   
 
     <!--(THIS IS NOT A PART OF MY JS1-CA - ONLY FOR LEARNING)-->
     <!--api call - filter/search

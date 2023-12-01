@@ -1,12 +1,21 @@
 :root {
     --green: #0A3641;
+    --white: #fff;
 }
 
 body {  
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0 10px;
-    padding:  0px 10px;
     color: #0A3641;
+    max-width: 1050px;
+    background-color: #0A3641;
+}
+
+body main, body header {
+    background-color: var(--white);
+}
+
+main {
+    margin: 100px 0 20px;
 }
 
 ul, ol, a {
@@ -25,13 +34,14 @@ nav a:hover {
 h1 {
     display: block;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.2em;
+    font-size: 1.3em;
     list-style: none;
     text-decoration: none;
     text-align: center;
     justify-content: center;
+    text-transform: uppercase;
     margin: 20px 0 30px;  
-    padding: 3px; 
+    padding: 20px 0; 
     width: 100%;
     color: #0A3641;
     text-align: center;
@@ -40,25 +50,39 @@ h1 {
 h2, h3, h4  {
     text-decoration: none;
     list-style: none;
-    font-size: 1.1em;
+    font-size: 1em;
+}
+
+.icon-button {
+    display: block;
+    width: 120px;
 }
 
 
 /*Header*/
 
-header {
+body header {
     display: grid;
-    grid-template-columns: 80px auto 100px;
+    grid-template-columns: 80px 1fr auto;
+    position: fixed;
+    width: 100%;
+    height: 95px;
+    margin: -100px auto 0 -20px;
+    padding: 0 15px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--green);
+    z-index: 2;
 }  
 
 .headlogo {
-    display: flex;
-    width: 50%;
-    min-width: 75px;
-    max-width: 100px;
+    display: block;
+    max-width: 90px;
     height: auto;
-    margin: 20px auto 0;
+    margin: 20px auto;
+}
 
+.headlogo1 {
+    display: none;
 }
 
 #back, .nav1, #menu-chechbox {
@@ -70,13 +94,13 @@ header {
     text-transform: uppercase;
     display: flex;
     width: 100%;
-    min-width: 100px;
-    padding: 0;  
+    min-width: 100px; 
     background-color: #fff;
 }
 
 .nav1 {
-    margin: 10px 0 0 -px;
+    margin: 10px 0 0 10px;
+    z-index: 2;
 }
 
 .nav1 a:hover {
@@ -89,97 +113,76 @@ header {
     background-color: #fff;
     flex-direction: column;
     width: 100%;
-    margin-left: -30px;
+    margin: -10px 0 0 -25px;
     text-align: center;
     background-color: #fff;
     border-bottom: 4px solid #0A3641;
+    z-index: 2;
 }
 
 .nav2 a {
     font-size: 1.3em;
-    width: 100%;
     color: #0A3641; 
     margin: 15px auto;
     height: auto;
     background-color: #fff;
+    z-index: 3;
 }
 
 label {
+    display: block;
+    margin: 30px 20px;
+}
+
+.nav {
     display: flex;
-    margin: 30px 0px 40px 20px;
+    padding: 5px;
+}
+
+
+.nav4 {
+    margin: 20px 5px;
 }
 
 .bag, .profile {
-    display: block;
     position: relative;
-    margin: 30px 10px;
+    padding: 10px;
     float: right;
-    scale: 1.7;
+    scale: 1.5;
 }
-
 
 
 /*Index & Home*/
 
-.container-x {
-    min-width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.content-x {
-    display: flex;
-    margin: 70px auto; 
-    justify-content: center;
-}
-
-.background1 {
+.background1 img {
     display: block;
-    background-image: url(/images/other/woods.jpg);
-    height: 450px;
-    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    background-color: var(--green);
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border: 3px solid #0A3641;
-}   
-
-.women, .men {
-    display: flex;
-    margin: 30px auto;
-    letter-spacing: 0.3em;
-    align-items: center;
-    justify-content: center;
-}   
+    object-position: 100%;
+    margin-top: 0px;
+}  
 
 .women a, .men a {
-    font-size: 1.5em;
-    font-weight: bolder;   
-    color: #0A3641;
-    padding: 20px;
-    margin: auto 20px;
-    color: #0A3641;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 3px solid #0A3641;
-    width: 200px;
+    display: block;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2em;
+    font-weight: bolder;
     text-align: center;
+    justify-content: center;
+    padding: 10px;
 }
 
-.sf p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.4em;
-    margin-top: 40px;
-    text-align: center;  
-    font-style: italic;
-    font-weight: bold;
-    letter-spacing: 0.5em;
+.women a {
+    color: var(--green);
+    border-radius: 0 60px 0 0;
 }
 
-.na-x {
-    border-style: none;
-    letter-spacing: 0.6em;
+.men a {
+    color: var(--green);  
+    border-radius: 0 0 0 60px;  
 }
 
 .na-x2 {
@@ -270,16 +273,16 @@ label {
 .p1, .p2 {
     color: #0A3641;
     margin: 20px;
-    line-height: 1.5em;
-    font-size: 1.5em;
+    line-height: 1.4em;
+    font-size: 0.7em;
 }
 
 .p3 {
     color: #0A3641;
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1em;
     margin: 20px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .ab-p {
@@ -289,38 +292,32 @@ label {
 .logo4 {
     display: block;
     width: 80px;
-    margin-left: 40px;
-    margin-top: 80px;
+    margin: 30px 0 0 20px;
 }
 
 .p4 {
     display: block;
     color: #0A3641;
-    margin-left: 30px;
-    margin-top: 10px;
-    font-size: 0.8em;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding-bottom: 30px;
+    font-size: 0.6em;
 }
 
 
 
 /*Contact*/
 
+.container-contact {
+    margin: 20px;
+}
+
 .c-name {
-    text-align: center;
     text-transform: uppercase;
     color: #0A3641;
     margin-top: 30px;
-}
+    font-size: 1em;
 
-.shipping {
-    text-align: center;
-    font-size: 18px;
-    letter-spacing: 2px;
-    color: #0A3641;
-}
-
-.p-bold { 
-    font-weight: bold;
 }
 
 .container4 {
@@ -329,9 +326,22 @@ label {
     text-align: center;
 }
 
+
 .content2 {
-    font-size: 18px;
+    display: flex;
+    font-size: 0.8em;
     letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.content2 .fa-solid {
+    width: 30px;
+}
+
+.content2 p {
+    display: block;
+    padding-left: 10px;
+    margin: auto 0;
 }
 
 .container5 {
@@ -360,23 +370,24 @@ label {
     display: flexbox;
     flex-direction: column;
     width: 95%;
-    padding: 15px;
+    padding: 10px;
+    font-size: 0.8em;
 }
 
 .name, .email, .phone {
     display: block;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: relative;
+    font-size: 0.8em;
     background-color: #fff;
     color: #0A3641;
-    margin: 10px;
+    margin: 2px 10px;
     width: 90%;
     height: 30px;
     border: 1px solid #0A3641;
 }
 
 form textarea {
-    font-size: 16px;
+    font-size: 0.8em;
     width: 90%;
     outline: none;
     justify-content: center;
@@ -385,7 +396,7 @@ form textarea {
 }
 
 .m-button {
-    font-size: 20px;
+    font-size: 1em;
     background-color: #0A3641;
     color: #fff;
     width: 92%;
@@ -407,11 +418,12 @@ form textarea {
     margin: 10px;
     padding: 20px;
     scale: 3;
-
 }
+
 .logoname {
     text-transform: uppercase;
     font-size: 20px;
+    padding-bottom: 20px;
     text-align: center;
 }
 
@@ -604,28 +616,26 @@ form textarea {
 
 .ty {
     display: flex;
-    font-size: 3em;
+    font-size: 1.2em;
     border: none;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .ty-p {
-    font-size: 1.5em;
+    font-size: 0.9em;
     text-align: center;
     font-style: italic;
-    margin-top: -25px;
+    margin-top: -50px;
 }
 
 .summary {
     display: flex;
-    border: 1px solid #0A3641;
-    font-size: 1em;
-    align-items: center;
+    border: 1px solid var(--green);
+    font-size: 0.6em;
     justify-content: center;
-    text-align: center;
-    margin: 70px auto 60px;
-    padding: 10px ;
+    margin: 40px auto;
+    padding: 10px;
 }
 
 .container9 {
@@ -635,12 +645,13 @@ form textarea {
 
 .container9 img {
     display: block;
-    width: 90px;
+    width: 60px;
+    margin-right: 10px;
 }
 
 .sum1, .sum2, .sum3 { 
     display: flex;
-    font-size: 1em;
+    font-size: 0.8em;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -650,9 +661,13 @@ form textarea {
 
 .sum1 p, .sum2 p, .sum3 p{ 
     display: block;
-    width: 60%;
+    width: 80%;
     padding: 10px;
     text-align: left;
+}
+
+.rebtn {
+    padding-bottom: 30px;
 }
 
 .returnbt {
@@ -660,11 +675,10 @@ form textarea {
     border: 3px solid #0A3641;
     background-color: #fff;
     box-sizing: border-box;
-    width: 250px;
+    width: 200px;
     height: auto;
-    font-size: 1.5em;
+    font-size: 1em;
     text-align: center;
-    margin-top: 20px;
     margin: auto;
     padding: 10px;
 }
@@ -673,6 +687,7 @@ form textarea {
     text-decoration: none;
     list-style: none;
     color: #0A3641; 
+    padding: 20px;
 }
 
 
@@ -680,59 +695,58 @@ form textarea {
 
 .mah1 {
     border: none;
-    font-size: 2.5em;
-    text-align: left;
-    margin: 30px;
-    margin-bottom: 60px;
-}
-.ma-l {
-    margin: 0px 30px;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px auto 0;
 }
 
-.ma-form h2, .ma h3  {
-    font-size: 2.2em;
-    font-weight: 600;
+.ma-l {
+    font-size: 0.8em;
+    margin: 30px;
 }
 
 .ma-form {
     display: block;
-    width: 100%;
-    color: #0A3641;
-    font-weight: 400;
+    border: 1px solid var(--green);
+    border-radius: 20px;
+    width: 90%;
+    color: var(--green);
+    margin: auto auto 30px;
 }
 
-.email-ma, .password-ma, .email-ma2 {
+.email-ma, .password-ma {
     display: block;
-    margin: 10px 30px;
-    width: 60%;
+    margin: -25px 30px;
+    width: 75%;
     height: 20px;
     font-weight: 700;
 }
 
 .ma-p1 {
-    margin-left: 30px;
-    font-size: 0.8em;
-    margin-bottom: 20px;
+    margin: 30px 30px 0;
+    font-size: 0.6em;
     text-decoration: underline;
 }
 
 .ma-p2 {
-    margin: 30px 30px 5px;
-    font-size: 1.3em;
+    margin: 10px 0 0 30px;
+    font-size: 0.7em;
 }
 
 .m-a-button {
-    margin: 0px 30px 20px;
+    margin: 10px 30px 20px;
     background-color: #fff;
-    color: #0A3641;
-    font-size: 1.3em;
-    border: 2px solid #0A3641;
+    color: var(--green);
+    font-size: 0.8em;
+    border: 1px solid #0A3641;
     box-sizing: border-box;
 }
 
 .ma-join {
+    font-size: 1em;
     margin-left: 30px;
-    width: 70%;
+    width: 60%;
 }
 
 .ma-form2 {
@@ -740,11 +754,30 @@ form textarea {
     color: #0A3641;
 }
 
+.ma-form2 .ma-l {
+    margin: -5px 0 5px 30px;
+}
+
+.ma-form2 .m-a-button {
+    margin-left: 0;
+}
+
+.email-ma2 {
+    margin: -10px 0 -5px 30px;
+    width: 40%;
+}
+
+.formimg {
+    display: none;
+    visibility: hidden;
+}
+
 
 /*Footer*/
 
 footer {
     min-height: 150px;
+    background-color: var(--white);
 }
 
 .footer-x {
@@ -825,6 +858,21 @@ footer {
 
 /*MEDIA*/
 
+
+
+
+@media only screen and (min-width: 400px) {
+
+header {
+    grid-template-columns: 100px auto 100px;
+}
+label {
+    display: flex;
+    margin: 30px 30px;
+}
+    
+}
+
 @media only screen and (min-width: 570px) and (max-width: 749px) {
 
 
@@ -843,7 +891,7 @@ header {
 }
     
 .headlogo {
-    min-width: 120px;
+    min-width: 100px;
     height: auto;
     margin-top: 20px;
 }
@@ -856,7 +904,7 @@ header {
 /*Index & Home*/  
     
 .women a, .men a {
-    font-size: 2.5em;
+    font-size: 1.5em;
     padding: 10px;
     height: auto;
 }
@@ -895,24 +943,24 @@ header {
 }
     
 .p1, .p2 {
-    font-size: 2em;
+    font-size: 1em;
     margin-top: 30px;
 }
 
 .p3 {
-    font-size: 2em;
+    font-size: 1.2em;
     margin-bottom: 40px;
 }
 
 .logo4 {
-    min-width: 120px;
-    margin-top: 80px;
-    margin-left: 40px;
+    min-width: 85px;
+    margin-top: 60px;
+    margin-left: 20px;
 }
 
 .p4 {
-    font-size: 1.2em;
-    margin-left: 30px;
+    font-size: 0.6em;
+    margin-left: 20px;
 }
 
 
@@ -937,15 +985,15 @@ header {
 }
     
 .ty {
-    font-size: 3em;
+    font-size: 1.4em;
 }
     
 .ty-p {
-    font-size: 1.7em;
+    font-size: 1.1em;
 }
     
 .summary {
-    font-size: 1.2em;
+    font-size: 1em;
 }
     
 .container9 img {
@@ -960,7 +1008,7 @@ header {
     width: 55%;
     margin: auto;
     border: 1px solid #0A3641;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: 20px;
 }
     
@@ -1012,8 +1060,14 @@ h1 {
 
 /*Header*/    
 
+body header {
+    margin: -100px -20px;
+  
+}
+
 .headlogo {
-    min-width: 140px ;
+    min-width: 110px;
+    margin-top: 20px;
     height: auto;
 }
 
@@ -1024,10 +1078,10 @@ h1 {
 
 /*Index & Home*/
 
-.content-x ol {
-    display: flex;
+.background1 img {
+    height: 450px;
 }
-    
+ 
 .women, .men {
     margin: 10px 20px;
 }   
@@ -1071,30 +1125,28 @@ h1 {
 
 .img4 {
     width: 80%;
-    height: auto;
-    margin: auto;
+    max-width: 700px;
+    margin: 60px auto;
     background-image: url('/images/Other/greenjacket-medium.jpg'); 
 }
-    
-.line1 {
-    margin-top: 20px;
-}
+
 
 .p1, .p2, .p3, .p4 {
-    font-size: 2.5em;
-    margin: 40px;
+    font-size: 1.2em;
+    margin: 40px 70px;
+    padding: 0 10px;
 }
 
 .logo4 {
     margin: 0;
-    min-width: 200px;
-    margin-left: 50px;
-    margin-top: 150px;
+    width: 90px;
+    margin: 0px 80px 0;
 } 
 
 .p4 {
-    font-size: 1.5rem;
-    margin-left: 45px;
+    font-size: 0.7em;
+    margin: 10px 70px ;
+    padding-bottom: 50px;
 }
 
 
@@ -1166,15 +1218,16 @@ h1 {
 }
     
 .ty {
-    font-size: 4em;
+    font-size: 1.7em;
 }
     
 .ty-p {
-    font-size: 2em;
+    font-size: 1.2em;
 }
     
 .summary {
-    font-size: 1.5em;
+    font-size: 1em;
+    width: 450px;
 }
     
 .container9 {
@@ -1194,7 +1247,6 @@ h1 {
     width: 33%;
     margin: 0 10PX;
     border: 1px solid #0A3641;
-    font-size: 1.2em;
     margin-bottom: 20px;
 }
     
@@ -1210,23 +1262,65 @@ h1 {
 
 /*My account*/
 
-.ma-container {
-    display: flex;
-    margin: 0px 40px;
+.line1 {
+    display: none;
 }
 
-.email-ma, .password-ma, .email-ma2 {
-    width: 70%;
+.ma-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0px auto;
+    padding-bottom: 30px;
+    max-width: 600px;
+    justify-content: center;
+}
+
+.ma-form {
+    border: none;
+    margin: 10px;
+    width: 300px;
+}
+
+.mah1 {
+    text-align: left;
+    margin: 0 30px;
+}
+
+.email-ma, .password-ma {
+    width: 60%;
     font-weight: 900;
 }
 
-.ma-p1, .ma-p2 {
-    font-size: 1.2em;
+.ma-p2 {
+    font-size: 0.7em;
 }
 
-.ma-form2 {
-    margin-top: 115px;
+.ma-join {
+    font-size: 0.9em;
+    font-weight: 500;
+    margin: 20px 0;
+    width: 250px;
 }
+
+.ma-form2, .email-ma2, .ma-form2 .ma-l {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.ma-form2 .ma-l{
+    padding: 0;
+}
+
+.formimg {
+    display: block;
+    visibility: visible;
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 22px;
+    opacity: 80%;
+}
+
 
 
 /*Footer*/
@@ -1270,32 +1364,49 @@ h1 {
 /*All html*/
 
 body {
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
-    
+
+body main {
+    margin-top: 120px;
+} 
+
+body header {
+    display: grid;
+    grid-template-columns: auto 800px auto;   
+    margin: -120px auto;
+    height: 90px;
+}
+
 h1 {
     font-size: 1.6em;
 }
 
 
 /*Header*/ 
+
     
-header {
-   display: grid;
-   grid-template-columns: 1fr auto auto;
-   margin-top: 20px;
+body header {
+    grid-template-columns: auto auto 120px;
+    max-width: 1100px;
+    min-height: 110px;
+    padding-right: 30px;
 }
-    
+
+.headlogo1 {
+    display: block;
+    width: 130px;
+    margin: 20px 30px;
+}
+
 .headlogo {
-    min-width: 100px;
-    height: auto;
-    margin-right: 90px;
+    display: none;
 }
 
 .bag, .profile {
-    scale: 1.3;
-    margin: 50px 30px 0 0;
+    scale: 1.8;
+
 }
 
 .hide {
@@ -1312,19 +1423,26 @@ header {
     display: flex;
     flex-direction: row;
     border: none;
-    margin-top: 40px;
-    width: 500px;
-    margin-left: 25px; 
+    margin: -60px 150px;
+    width: 700px; 
+    padding: 0 10px;
+    background-color: transparent;
+    justify-content: center;
+
 }
     
-.nav2 a {
+.nav2 a, .navoutlet {
     display: inline-flex;
     border: none;
-    font-size: 1.1em; 
-    margin: 10px;
-    padding: 0;
+    margin:  -10px 10px;
+    text-transform: uppercase;
     justify-content: space-evenly;
     visibility: visible;
+}
+
+.navoutlet {
+    margin:  0;
+    font-size: 1em;
 }
 
 .nav2 a:hover {
@@ -1333,17 +1451,10 @@ header {
 
 
 /*Index & Home*/
-  
-.content-x ol {
-    display: block;
-}
 
-.background1 {
-    background-position: 0%;
-}
 
-.content-x ol {
-    display: flex;
+.background1 img {
+    height: 100%;
 }
     
 .women, .men {
@@ -1413,44 +1524,47 @@ header {
 }
 
 
-
 /*About us*/
 
 .ab-content {
-    max-width: 100%;
     margin: auto;
+}
+
+.ab-p {
+    padding: 0 20px;
 }
 
 .img4 {
     display: block;
-    max-width: 45%;
-    min-width: 300px;
+    width: 50%;
+    max-width: 550px;
     float: right;
-    margin: 40px;
+    margin: 0 40px;
     background: #0A3641;
     box-shadow: 20px 20px 20px #0A3641;   
 }
 
-.p1 {
-    font-size: 2em;
-    margin-top: 40px;
+.p1, .p2 {
+    font-size: 1.2em;
+    margin-top: 50px;
     text-align: left;
 }
 
-.p2, .p3  {
-    font-size: 2em;
-    text-align: left;
+.p3  {
+    font-size: 1.2em;
+    text-align: left;    
+    width: 350px;
+    margin: 30px 0 0 20px;
 }
 
 .logo4 {
-    min-width: 150px;
-    margin-left: 50px;
-    margin-top: 150px;
+    min-width: 95px;
+    margin: 60px 0 0 45px;
 }
 
 .p4 {
-    font-size: 1rem;
-    margin-left: 60px;
+    font-size: 0.8em;
+    margin-left: 40px;
 }
 
 .line1 {
@@ -1580,16 +1694,17 @@ header {
 }
     
 .ty {
-    font-size: 4em;
-}
-    
-.ty-p {
     font-size: 2em;
 }
     
+.ty-p {
+    font-size: 1.6em;
+}
+    
 .summary {
-    font-size: 1.8em;
-    margin-bottom: 90px;
+    font-size: 1.1em;
+    width: 500px;
+    margin-bottom: 60px;
 }
     
 .container9 {
@@ -1608,10 +1723,9 @@ header {
 .sum1, .sum2, .sum3 { 
     display: block;
     width: 33%;
-    margin: 10PX;
+    margin: 10px;
     border: 1px solid #0A3641;
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1em;    margin-bottom: 20px;
 }
     
 .sum1 p, .sum2 p, .sum3 p { 
@@ -1627,55 +1741,64 @@ header {
 
 /*My account*/
 
+.line1 {
+    display: none;
+}
+
 .ma-container {
-    margin: 0px 40px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-evenly;
+    max-width: 900px;
+    margin: auto;
+    padding-bottom: 40px;
 }
 
-.ma-form h2 {
-    font-size: 2em;
+.mah1 {
+    text-align: left;
+    margin-left: 30px;
 }
-    
+
+.m-a-button {
+    padding: 5px;
+    margin: 20px 30px;
+}
+
 .ma-form {
-    display: block;
-    border: 4px solid #0A3641;
-    margin: 40px auto;
-    padding: 10px 10px 30px;
-    width: 500px;
-    color: #0A3641;
-    font-weight: 500;
-    font-size: 1.3em;
+    margin: 0 30px;
+    border: none;
 }
 
-.ma-form2 {
-    display: flex;
-    margin: 40px auto 0px;
-    color: #0A3641;
-    border: 4px solid #0A3641;
-    border-radius: 50px;
-    min-width: 800px;
-    max-width: 1100px;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
+.formimg {
+    display: block;
+    visibility: visible;
+    width: 90%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 80%;
+    border-radius: 30px;
+
 }
 
 .ma-join {
-    max-width: 70%; 
-    font-size: 1.4rem;
+    width: 100%;
+    margin: 20px 0;
+    font-size: 1em;
 }
 
 .email-ma, .password-ma {
     font-size: 0.8em;
+    width: 60%;
 }
     
 .email-ma2 {
-    width: 80%;
+    width: 50%;
     font-size: 0.8em;
+    margin: 0;
 }
 
-.m-a-button {
-    height: 40px;
-    margin-top: 20px;
+.ma-form2 .ma-l {
+    margin: 0 0 -15px 0;
 }
 
 .ma-p1, .ma-p2 {
@@ -1720,19 +1843,13 @@ footer {
 }
 
 
-@media only screen and (min-width: 1800px) {
-
-body {
-    width: 80%;
-    height: 100vh;
-    margin: auto;
-}
+@media only screen and (min-width: 1600px) {
 
 /*Header*/
 
 header {
-    width: 90%;
-    margin: auto;
+    height: 120px;
+    margin: 0 auto -20px;
 }
 
 .fa-2x {
@@ -1762,6 +1879,19 @@ header {
     max-width: 90%;
     margin: auto;
 }
+
+.p3 {
+    width: 100%;
+}
+
+.img4 {
+    max-width: 550px;
+}
+
+.logo4, .p4 {
+    margin-left: 100px;
+}
+
 
 
 /*Success*/

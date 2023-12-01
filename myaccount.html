@@ -7,6 +7,7 @@
     <meta name="description" content="Rainydays - My account"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ixd.css">
     <script src="https://kit.fontawesome.com/e2e07e46bd.js" crossorigin="anonymous"></script>    
     <!-- Hotjar Tracking Code for https://rainydays-ixd-renahashimi.netlify.app/ -->
 <script>
@@ -24,6 +25,9 @@
 <body>
   <header>
     <div>
+      <div>
+        <a href="index.html"><img class="headlogo1" src="images/Logo/Logo.jpg" alt="Logo"></a>
+      </div>
       <input type="checkbox" id="menu-chechbox">
       <label class="hide" for="menu-chechbox"><i class="fa fa-bars fa-2x" style="color: #0a3641;"></i>        
       </label> 
@@ -34,16 +38,20 @@
           <a href="men.html">Men</a>
           <a href="contact.html">Contact</a>
           <a href="about.html">About us</a>
+          <p class="navoutlet"><a href="outlet.html">Outlet</a></p>
         </div>
       </nav>     
     </div>
     <div>
       <a href="index.html"><img class="headlogo" src="images/Logo/Logo.jpg" alt="Logo"></a>
     </div>
-    <div>
-      <nav>
-        <a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a>
-        <a class="bag" href="cart.html"><i class="fa-solid fa-bag-shopping fa-2" style="color: #0a3641;"></i></a>
+    <div class="nav4">
+      <nav class="nav">
+        <div><a class="profile" href="myaccount.html"><i class="fa-solid fa-user fa-2" style="color: #0a3641;"></i></a></div>
+        <div>  
+          <p class="cartnumber">0</p>
+          <a class="bag" href="cart.html"><i class="fa-solid fa-bag-shopping fa-2" style="color: #0a3641;"></i></a>
+        </div>
       </nav>
     </div>
   </header>
@@ -68,9 +76,10 @@
       </form>
       <div class="line1"></div>
       <form class="ma-form2">
+        <img class="formimg" src="images/Other/womanback.jpeg" alt="womanback">
         <h3 class="ma-join">JOIN OUR NEWSLETTER 
           FOR MORE RAINY´DAYS</h3>
-        <label for="Email" class="ma-l">Email</label> 
+        <label for="email" class="ma-l">Email</label> 
         <input type="email" id="email" class=email-ma2  autocomplete="on" required> 
         <button class="m-a-button" id="button" type="submit">SUBSCRIBE</button>
       </form>

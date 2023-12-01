@@ -1,45 +1,41 @@
 import { errorMessage } from "./errormessage.js";
+import { url } from "./script.js";
+import { getProductsMen } from "./men.js";
 
-const url = "https://api.noroff.dev/api/v1/rainy-days/";
+
 const productSection = document.querySelector(".productSection");  
 
-
-async function getProducts() {
+export async function getProducts() {
   try {
     const response = await fetch(url);
     const products = await response.json(); 
 
+
     productSection.innerHTML = "";
 
     for (let i = 0; i <products.length; i++) {
-       //(i === 2) - to show more products on page.
-     if (i === 2) {
-        break;
-     }
-
-//API call for every jacket
-products.forEach(function (jacket){  
-  productSection.innerHTML += ` <div class="jacketInfo">
-                                  <div class="jacketContainer">
-                                    <a href="product.html?id=${jacket.id}" class="productJacket>
-                                    <div class="productname">${jacket.title}</div>
-                                    <div class="productImage"style="background-image: url(${jacket.image})" alt"${jacket.title}"></div>
-                                    <p class="productPrice">${"$" + jacket.price}</p><div>
-                                    <div class="bnBox"><a href="product.html?id=${jacket.id}" id="bn">READ MORE</a></div> 
-                                    </a>
-                                  </div>
-                                </div>`;
+      if (products[i].onSale === true) {
+        products[i].price = products[i].discountedPrice;
+      } if (products[i].gender === "Female") {
+        productSection.innerHTML += ` <div class="jacketInfo">
+                                        <div class="jacketContainer">
+                                          <a href="product.html?id=${products[i].id}" class="productJacket>
+                                            <div><h2 class="productname">${products[i].title}</h2></div>
+                                            <div class="productImage"style="background-image: url(${products[i].image})" alt"${products[i].title}"></div>
+                                            <p class="productPrice">$${products[i].price}</p><div>
+                                            <div class="bnBox"><a href="product.html?id=${products[i].id}" id="bn">READ MORE</a></div> 
+                                          </a>
+                                        </div>
+                                      </div>`;
                      
-});
-}} catch(error) {
+  
+    }}
+
+} catch(error) {
     console.log("Unknown error", error);
     productSection.innerHTML = errorMessage();
 }
-// Coded H1-title for women.html page, but couldn´t change it for men.html, without one of them disappearing :/
-document.querySelector(".productWoman").innerHTML = "WOMAN"; 
-//document.querySelector(".productMen").innerHTML = "MEN"; 
 }
-
 getProducts();
 
 
