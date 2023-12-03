@@ -2,7 +2,7 @@ import { getCart } from "./data/getCart.js";
 import { url } from "./script.js";
 
 
-const inCartItem = localStorage.getItem("cartItems");
+const inCartItem = getCart();
 
 
 const cartContent = document.querySelector(".cartcontainer");
@@ -17,7 +17,7 @@ console.log(inCartItem);
   //itemsInCart.innerHTML = `<p class="cartitemnumber"> ${inCartItem.length} </p>`;
   cartContent.innerHTML = "";
 
-if (inCartItem.length === 0){  
+if (!inCartItem){  
   cartContent.innerHTML += `<div class="noitems"><p><No products in cart</p></div>`;
 }
    /* cartContent.innerHTML += `<div class="cartcontainer" jacket-id="${cartItems.id}
