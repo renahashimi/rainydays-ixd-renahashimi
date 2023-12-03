@@ -20,6 +20,7 @@ async function getSaleData() {
                                                     <div class="outletimage" style="background-image: url(${sale[i].image})" alt"${sale[i].title}"></div>
                                                     <p class="outletpricefull">${"$" + sale[i].price}</p><div>
                                                     <p class="outletprice">${"$" + sale[i].discountedPrice}</p><div>
+                                                    <div class="bnBox"><a href="product.html?id=${sale[i].id}" id="bn">READ MORE</a></div> 
                                                 </div>   
                                             </a>  
                                         </div>`;                                                               

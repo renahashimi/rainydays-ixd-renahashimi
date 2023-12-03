@@ -5,9 +5,10 @@ export function getCart() {
     if (!cartItems) {
         return null;
     }
-}
+};
 
-export function saveCartItems (cartItems) {
+
+/*export function saveCartItems (cartItems) {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }
+  }*/
 

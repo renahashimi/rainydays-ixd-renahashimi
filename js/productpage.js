@@ -18,9 +18,6 @@ export async function getProductInfo () {
       createProductInfo(jacket);
       productContent.innerHTML = "";
       likeJackets();
-      
-  
-  
 
 } catch(error) {
   console.log("Unknown error", error);
@@ -68,13 +65,21 @@ function createProductInfo (jacket) {
                                   </div>`;
 
 //ADD TO CART
-const addButton = document.querySelector(".addtocartbtn");
-  addButton.addEventListener("click", addToCart);
+
+function buttonEvent () {
+let addButton = document.querySelectorAll(".addtocartbtn");
+addButton.forEach((btn) =>{
+  btn.addEventListener("click", addToCart (jacket));
   getCart();
 
+  console.log(jacket);
 
+});
+}
+buttonEvent();
 
-
+  
+localStorage.setItem("cartItems", JSON.stringify(buttonEvent));
 
 //Is the jacket on sale ?
 let priceText = document.querySelector(".productPrice2");
@@ -109,7 +114,6 @@ setTimeout (function () {
 setTimeout(function () {
   load.innerHTML = "Is this your new jacket?" + " " + "&#128525"
 }, 3000);
-
 
 
 } 

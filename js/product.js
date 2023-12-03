@@ -30,9 +30,6 @@ export async function getProducts() {
                      
   
     }};
-    
-
-      
   
 
 } catch(error) {

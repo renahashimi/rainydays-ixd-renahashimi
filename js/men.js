@@ -12,8 +12,6 @@ export async function getProductsMen() {
 
     productSectionMen.innerHTML = "";
 
-
-
     for (let i = 0; i <products.length; i++) {
         if (products[i].onSale === true) {
             products[i].price = products[i].discountedPrice; 
