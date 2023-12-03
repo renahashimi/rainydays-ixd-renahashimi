@@ -68,7 +68,7 @@ body header {
     width: 100%;
     max-width: 1100px;
     height: 95px;
-    margin: -100px -7px;
+    margin: -100px -8px;
     padding: 0 25px;
     background-color: var(--white);
     border-bottom: 1px solid var(--green);
@@ -114,7 +114,7 @@ body header {
     background-color: #fff;
     flex-direction: column;
     width: 100%;
-    margin: -10px 0 0 -25px;
+    margin: -10px 0 0 -35px;
     text-align: center;
     background-color: #fff;
     border-bottom: 4px solid #0A3641;
@@ -436,12 +436,19 @@ form textarea {
     text-transform: uppercase;
 }
 
-.os, .bi-text {
+.box4 {
+    margin: 30px auto;
+    padding-bottom: 40px;
+    border-top: 2px solid var(--green);
+}
+
+.bi-text {
     display: block;
     text-transform: uppercase;
-    margin-left: 20px;
-    font-size: 16px;
+    margin: 20px auto;
+    font-size: 1em;
     text-align: center;
+    font-weight: 400;
 }
 
 .container6 {
@@ -470,16 +477,11 @@ form textarea {
     margin-bottom: 30px;
 }
 
-.box4 .bi-text {
-    margin: 10px;
-}
-
 .ch-text1 {
     width: 160px;
     padding: 5px;
     margin-bottom: 5px;
     font-size: 16px;
-
 }
 
 .ch-text2 {
@@ -501,9 +503,7 @@ form textarea {
 .container7, .container8 {
     display: flex;
     width: 90%;
-    position: relative;
-    align-items: center;
-    justify-content: center;
+    max-width: 280px;
     margin: auto;
     color: #0A3641;
 }
@@ -514,7 +514,7 @@ form textarea {
     flex-direction: column;
     flex-shrink: 2;
     color: #0A3641;
-    width: 100%;
+    width: 90%;
 }
 
 .cform-l {
@@ -532,10 +532,9 @@ form textarea {
 }
 
 .city1, .code1 {
-    position: relative;
-    width: 105px;
-    margin: 7px;
-    flex-direction: column;
+    width: 47%;
+    max-width: 130px;
+    margin: 10px auto; 
     background-color: #d9d9d9;
 }
 
@@ -544,7 +543,7 @@ form textarea {
     align-items: center;
     flex-direction: column;
     color: #0A3641;
-    width: 100%;
+    width: 90%;
 }
 
 .creditnr {
@@ -553,10 +552,17 @@ form textarea {
     background-color: #d9d9d9;
 }
 
+.sec2, .sec3 {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11px;
+}
+
 .mount, .year, .cvv {
     position: relative;
-    width: 62px;
-    margin: 7px;
+    width: 30.5%;
+    margin: 0;
     flex-direction: column;
     background-color: #d9d9d9;
 }
@@ -590,17 +596,18 @@ form textarea {
 }
 
 .ch-button {
-    background-color: #0A3641;
+    background-color: var(--white);
     width: 200px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px;
+    border-radius: 22px;
 }
 
 .ch-button a {
     text-decoration: none;
     list-style: none;
-    color: #fff; 
+    color: var(--green); 
 }
 
 
@@ -636,7 +643,7 @@ form textarea {
     font-size: 0.6em;
     justify-content: center;
     margin: 40px auto;
-    padding: 10px;
+    padding: 5px 2px;
 }
 
 .container9 {
@@ -1169,15 +1176,21 @@ h1 {
     width: 250px;
     font-size: 22px;
 }
-    
-.ch-img {
-    margin: 20px;
-    width: 180px;
-    height: auto;
+
+.ch-form, .ch-form2{
+    display: block;
+    width: 350px;
+    margin: auto;
+    align-items: center;
+    margin-left: -30px;
 }
 
-.box3 h2, .box4 h3, .box5 h3 {
-    font-size: 1.2em;
+.bi-text {
+    font-weight: 700;
+}
+
+.box4 h2{
+    font-size: 1.1em;
 }
 
 .container7 input, .container8 input {
@@ -1189,11 +1202,11 @@ h1 {
 }
 
 .city1, .code1 {
-    width: 140px;
+    max-width: 46%;
 }
 
 .mount, .year, .cvv {
-    width: 82px
+    width: 30.2%;
 }
 
 .ch-button {
@@ -1369,7 +1382,7 @@ body main {
 } 
 
 body header {
-    grid-template-columns: auto 750px auto;
+    grid-template-columns: auto 700px auto;
     margin: -125px auto;
     height: 110px;
     max-width: 1125px;
@@ -1394,7 +1407,6 @@ h1 {
 
 .bag, .profile {
     scale: 1.8;
-
 }
 
 .hide {
@@ -1416,7 +1428,6 @@ h1 {
     padding: 0 10px;
     background-color: transparent;
     justify-content: center;
-
 }
     
 .nav2 a, .navoutlet {
@@ -1457,9 +1468,10 @@ h1 {
 
 .women a, .men a {
     font-weight: 600;
-    margin: 20px;
-    padding: 20px;
-    width: 250px;
+    margin-left: 20px;
+    padding: 30px;
+    width: 350px;
+    font-size: 3em;
 }
 
 .productWoman, .productMen {
@@ -1609,6 +1621,10 @@ h1 {
 
 
 /*Checkout*/
+
+.cartbox {
+    max-width: 1100px;
+}
  
 .content4 {
     display: grid;
@@ -1624,6 +1640,12 @@ h1 {
     font-size: 24px;
     padding: auto;
 }  
+
+.bi-text {
+    text-align: left;
+    margin-left: 65px;
+    font-weight: 900;
+}
 
 .ch-text1, .ch-text2, .ch-st {
     width: 350px;
@@ -1644,27 +1666,36 @@ h1 {
 }
 
 .container7 input, .container8 input {
-    font-size: 20px;
+    font-size: 1em;
+}
+
+.container7, .container8 {
+    margin: auto;
 }
 
 .box5 h3 {
-    margin-top: 70px
+    margin-top: 70px;
 }
    
 .ch-form3 {
     margin-top: 50px;
 }
 
+.box4 {
+    width: 400px;
+    border: none;
+}
+
 .name1, .address1, .creditnr {
-    width: 310px;
+    
 }
 
 .city1, .code1 {
-    width: 140px;
+    width: 47%;
 }
 
 .mount, .year, .cvv {
-    width: 82px
+    width: 30.5%;
 }
 
 .content5 {

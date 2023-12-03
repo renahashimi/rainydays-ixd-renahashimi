@@ -91,7 +91,7 @@
     color: var(--green);
     font-weight: 500;
     margin: 20px auto 10px;
-    width: 140px;
+    max-width: 95%;
 }
  
 .productPrice {
@@ -243,11 +243,11 @@
  
 select {
     display: block;
-    width: 87px;
+    width: 70px;
     margin: auto;
     justify-content: center;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.8em;
     color: var(--green);
     border-radius: 10px;
     background-color: #fff;
@@ -273,14 +273,28 @@ select {
     display: block;
     border: 1px solid var(--green);
     color: var(--green);
+    background-color: var(--white);
+    font-style: normal;
     border-radius: 10px;
-    width: 120px;
+    width: 100px;
     height: auto;
-    font-size: 0.8em;
-    font-weight: bolder;
+    font-size: 0.6em;
+    font-weight: bold;
     text-align: center;
     padding: 5px;
     margin: 35px auto; 
+    cursor: pointer;
+
+}
+
+#gtc a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--green);
+}
+
+#gtc {
+    margin-top: -25px;
 }
  
 .backbutton {
@@ -362,8 +376,14 @@ select {
     margin: auto;
 }
 
-#atc {
-    margin: 37px; 
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 36px;
+}
+
+.cartbuttons {
+    display: flex;
 }
 }
  
@@ -418,6 +438,17 @@ select {
     width: 500px;
     margin: 0 auto;
 }
+
+
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 36px;
+}
+
+.cartbuttons {
+    display: flex;
+}
 }
 
 
@@ -448,6 +479,7 @@ select {
 
 #productSection {
     display: flex;
+    justify-content: center;
 }
 
 .productName {
@@ -462,7 +494,7 @@ select {
 .productImage2 {
     min-width: 280px;
     min-height: 350px;
-    margin: 0 0 0 50px;
+    margin: -50px 0 0 ;
 }
 
 .productInfo {
@@ -490,8 +522,13 @@ select {
 }
 
 #atc {
-    margin: 37px 0 0 30px;
+
 }
+
+.cartbuttons {
+    margin: -20px 0 0 30px;
+}
+
 
 }
 
@@ -515,11 +552,14 @@ select {
 /*Product (PRODUCTPAGE)*/
 
 .productContent {
-    display: grid;
-    grid-template-columns: 400px 1fr;
+    display: block;
     margin: 0 80px;
     border: none;
     border-top: 3px double var(--green);
+}
+
+#productSection {
+    display: flex;
 }
 
 .productName {
@@ -545,7 +585,7 @@ select {
     min-width: 300px;
     max-width: 400px;
     min-height: 300px;
-    margin-top: 30px;  
+    margin-top: -150px;  
 }
 
 .productDetail {
@@ -580,6 +620,17 @@ select {
     display: flex;
     max-width: 400px;
     margin: 0 auto;
+}
+
+#atc, #gtc  {
+    margin-right: 15px;
+    max-height: 30px;
+    margin-top: 38px;
+}
+
+
+.cartbuttons {
+    display: flex;
 }
 
 }

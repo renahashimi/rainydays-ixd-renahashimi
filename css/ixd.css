@@ -332,9 +332,18 @@
     display: block;
 }
 
-.cartcontainer, .content4 {
+.cartbox {
     display: block;
-    min-height: 100px;
+}
+
+.cartcontainer {
+    display: block;
+    min-height: 250px;
+    max-width: 400px;
+    border: 2px solid var(--green);
+    width: 90%;
+    margin: auto;
+
 }
 
 .cartInfo {
@@ -355,14 +364,24 @@
 .cartnumber {
     background-color: var(--white);
     color: var(--green);
-    border: #0A3641;
+    border: 0.5px solid var(--green);
     z-index: 3;
     position: absolute;
     margin: 22px 21px;
     border-radius: 50% 50%;
-    width: 15px;
+    width: 20px;
+    max-height: 25px;
     text-align: center;
 }
+
+.noitems {
+    display: block;
+    font-size: 1em;
+    margin: auto;
+
+}
+
+
 
 @media only screen and (min-width: 570px) and (max-width: 749px) {
 
@@ -370,6 +389,7 @@
 .sitename {
     font-size: 5em;
 }
+
 .linkphoto {
     min-width: 160px;
     min-height: 160px;
@@ -416,13 +436,13 @@
 }
 
 .rainimg, .fishimg {
-    min-height: 350px;
+    min-height: 400px;
 }
 
 .newarrivalscontent, .salecontent{
     grid-template-columns: repeat(4, 23%);
     justify-content: space-between;
-    margin: 15px;
+    margin: 20px;
 }
 
 .fishtx {
@@ -431,8 +451,11 @@
 }
 
 .raintx {
+    font-size: 2em;
+    width: 10%;
+    padding: 40px 0 0 30px;
     text-transform: uppercase;
-    margin-top: 40px;
+    letter-spacing: 0.3em;
 }
 
 .salepricefull{
@@ -485,16 +508,32 @@ body, header, footer{
 .content-x {
     margin: -80px auto;
     padding: 0;
+    height: 600px;
+}
+
+.linkmen, .linkwoman {
+    padding: 50px 0;
+}
+
+.linkphoto {
+    min-width: 220px;
+    min-height: 220px;
 }
 
 .newarrivalscontent, .salecontent {
     display: grid;
     grid-template-columns: repeat(4, 23%);
-    justify-content:space-between;
+    justify-content: space-around;
     border: 7px double var(--green);
     padding: 40px 0;
     margin: 0;
     border-top: none;
+}
+
+.saleInfo, .saleInfo2  {
+    margin: 0 10px;
+    width: 230px;
+    border-radius: 22px;
 }
 
 .salecontent {
@@ -513,13 +552,14 @@ body, header, footer{
 }
 
 .rainimg, .fishimg {
-    min-height: 500px;
+    min-height: 550px;
 }
 
 .raintx {
     width: max-content;
-    margin: 60px 50px;
-    font-size: 2.7em; 
+    margin: 30px 90px;
+    font-size: 2em; 
+    letter-spacing: 0.2em;
 }
 
 .fishtx {
@@ -544,6 +584,23 @@ body, header, footer{
     margin: 190px auto;
     max-width: 1125px;
 }
+
+/*CART*/
+
+.cartbox {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-evenly;
+    margin: 0 30px;
+    padding-bottom: 30px;
+}
+
+.cartcontainer {
+    margin-top: 40px;
+    min-height: 550px;
+}
+
+
 
 
 

@@ -1,14 +1,13 @@
 import { errorMessage } from "./errormessage.js";
 import { likeJackets } from "./like.js";
-// import { cartContainer } from "./cart.js";
-
+import { getCart } from "./data/getCart.js";
+import { addToCart } from "./addToCart.js";
 
 export const params = new URLSearchParams (document.location.search);
 export const id = params.get ("id");
 export const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
 
 const productContent = document.querySelector(".productContent");
-
 
 export async function getProductInfo () {
   try {
@@ -63,50 +62,19 @@ function createProductInfo (jacket) {
                                     </form>
                                     </div>
                                     <div class="cartbuttons">
-                                    <a href="#"><button type="submit" class="addtocartbtn" id="atc" data-jacket-id=${jacket.id} data-jacket-title=${jacket.title} data-jacket-image=${jacket.image}" data-jacket-price=${jacket.price}>ADD TO CART</button></a>
+                                    <i class="addtocartbtn" id="atc" data-jacket-id=${jacket.id} data-jacket-title=${jacket.title} data-jacket-image=${jacket.image}" data-jacket-price=${jacket.price}>ADD TO CART</i>
                                     <button id="gtc"><a href="cart.html?id=${jacket.id}">GO TO CART</a></button>
                                     </div>
                                   </div>`;
 
 //ADD TO CART
+const addButton = document.querySelector(".addtocartbtn");
+  addButton.addEventListener("click", addToCart);
+  getCart();
 
 
-const button = productContent.getElementsByClassName("addtocartbtn");
-  button[0].addEventListener("click", function () {
-    
-    console.log(button);  
-    alert ("Item added");
-    return productContent;
-  });  
-           
 
-   
-     
- 
-    function addToCart(productId) {
-      let inCartItem;
-      cart.push(productId);
-      localStorage.setItem("cart")
-      
-  
-      cart.forEach((cartItem) => {
-          if (productId === inCartItem.productId){
-              inCartItem = cartItem;
-              return;
-          }
-          
-      });
-  
-      if (inCartItem) {
-          inCartItem.quantity += 1;
-      } else {
-          cart.push({
-              productId: productId,
-              quantity: 1
-          })
-      }
-  
-  }
+
 
 //Is the jacket on sale ?
 let priceText = document.querySelector(".productPrice2");

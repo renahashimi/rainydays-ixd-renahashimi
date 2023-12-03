@@ -4,7 +4,7 @@ export const apiUrl = "https://api.noroff.dev/api/v1/rainy-days/" + id;
 export const url = "https://api.noroff.dev/api/v1/rainy-days/";
 
 
- /*
+ /* ALL THE WRONG CODES
       numberOfItems.innerHTML =  `<p class="carttotal"> ${numberOfItemsNow.length}`;
     
       numberOfItems.innerHTML += `<p class="carttotal"> ${numberOfItemsNow.length}`;
@@ -64,6 +64,26 @@ if (!cart) {
 
 }
 getCart();
+
+
+
+/*    const productInCart = productInCartItems.find(function(cart) {
+     return
+  });
+
+  if (!productInCart) {
+      const product = {id: cartId, title: cartTitle, image: cartImage, price: cartPrice};
+      productInCartItems.push(product);
+      saveCartItems(productInCartItems);
+      itemsInCart.innerHTML = `<p class="cartitemnumber"> ${inCartItem.length} </p>`;
+  } 
+else {
+     const newProductsInCart = productInCartItems.filter((product) => product.id !== cartId);
+     saveCartItems (newProductsInCart);
+     itemsInCart.innerHTML = `<p class="cartitemnumber"> ${inCartItem.length} </p>`;
+  }
+}
+
 
 export function saveGetCart() {
     localStorage.setItem("jacket", JSON.stringify(cart));

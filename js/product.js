@@ -29,7 +29,11 @@ export async function getProducts() {
                                       </div>`;
                      
   
-    }}
+    }};
+    
+
+      
+  
 
 } catch(error) {
     console.log("Unknown error", error);
