@@ -1,4 +1,4 @@
-import { getCartItems } from "./data/getCart.js";
+import { getCart } from "./data/getCart.js";
 import { url } from "./script.js";
 
 
