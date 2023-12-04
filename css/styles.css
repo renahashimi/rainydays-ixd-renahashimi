@@ -58,6 +58,10 @@ h2, h3, h4  {
     width: 120px;
 }
 
+button {
+    cursor: pointer;
+}
+
 
 /*Header*/
 
@@ -316,9 +320,9 @@ label {
 .c-name {
     text-transform: uppercase;
     color: #0A3641;
-    margin-top: 30px;
-    font-size: 1em;
-
+    margin: auto;
+    padding: 20px 0;
+    text-align: center;
 }
 
 .container4 {
@@ -327,27 +331,27 @@ label {
     text-align: center;
 }
 
-
 .content2 {
     display: flex;
-    font-size: 0.8em;
     letter-spacing: 2px;
-    margin: 10px 0;
+    margin: 10px auto;
 }
 
 .content2 .fa-solid {
-    width: 30px;
+    width: 40px;
 }
 
 .content2 p {
     display: block;
     padding-left: 10px;
     margin: auto 0;
+    letter-spacing: 0;
 }
 
 .container5 {
     display: flex;
     width: 80%;
+    max-width: 400px;
     height: auto;
     align-items: center;
     justify-content: center;
@@ -397,15 +401,13 @@ form textarea {
 }
 
 .m-button {
-    font-size: 1em;
-    background-color: #0A3641;
-    color: #fff;
-    width: 92%;
-    margin: 10px;
-    padding: 10px;
-    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: var(--white);
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: bolder;
+    color: var(--green);
+    border-radius: 20px;
 }
 
 .medialogo {
@@ -975,9 +977,6 @@ header {
 
 /*Contact*/
 
-.container5 {
-    width: 60%;
-}
 
 .foot-lname {
     font-size: 1.1em;
@@ -1595,10 +1594,7 @@ h1 {
     margin: 5px;
 }
 
-.container5 {
-    max-width: 500px;
-    margin-bottom: 30px;
-}
+
 
 .line-y {
     display: block;

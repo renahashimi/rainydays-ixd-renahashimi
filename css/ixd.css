@@ -167,6 +167,7 @@
     text-align: center;
     color: var(--green);
     font-weight: 900;
+    padding-bottom: 10px;
 }
 
 .saleimage2 {
@@ -182,13 +183,15 @@
 .rainimg, .fishimg {
     display: block;
     width: 100%;
-    height: 240px;
+    min-height: 200px;
+    max-height: 280px;
     margin: 0;
     padding-bottom: 30px;
     object-fit: cover;
 }
 
 .fishimg {
+    max-height: 400px;
     border-top: 15px solid var(--green);
 }
 
@@ -207,7 +210,7 @@
 .fishtx {
     font-family: 'The Girl Next Door', cursive;
     font-size: 1.2em;
-    width: 50%;
+    width: 55%;
     position: absolute;
     text-align: left;
     color: var(--green);
@@ -338,6 +341,54 @@
     text-align: center;
 }
 
+/*CONTACT*/
+
+.contactcontainer {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 60px;
+}
+
+.contactcontainer p {
+    font-size: 0.9em;
+}
+
+.rettx {
+    width: 70%;
+    margin: 20px auto;
+}
+
+.section1 {
+    border: 1px solid var(--green);
+    width: 90%;
+    max-width: 350px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 35);
+    padding: 0 10px 10px;
+}
+
+.section1 label {
+    display: none;
+}
+
+#refnumber{
+    width: 70%;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.returnbtn, .refbtn{
+    width: 70%;
+    height: 30px;
+    background-color: var(--white);
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: var(--green);
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
 /*CART*/
 
 .cartsitename {
@@ -355,7 +406,6 @@
     border: 2px solid var(--green);
     width: 90%;
     margin: auto;
-
 }
 
 .cartInfo {
@@ -398,8 +448,8 @@
     max-width: 400px;
     margin: 30px auto;
     padding: 5px;
-
 }
+
 .backtoshop h2, .backtoshop a {
     display: block;
     font-size: 0.8em;
@@ -509,6 +559,7 @@
     font-size: 1.3em;
 }
 
+
 /*OUTLET*/
 
 .outletcontent {
@@ -521,6 +572,23 @@
 .saleInfo-outlet {
     width: 220px;
 }
+
+
+/*CONTACT*/
+
+.contactcontainer {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.section1 {
+    max-width: 400px;
+    justify-content: space-between;
+}
+
+.rettx {
+    width: 70%;
+}
+
 
 }
 

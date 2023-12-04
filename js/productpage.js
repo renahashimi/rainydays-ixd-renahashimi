@@ -71,16 +71,16 @@ let addButton = document.querySelectorAll(".addtocartbtn");
 addButton.forEach((btn) =>{
   btn.addEventListener("click", addToCart (jacket));
   getCart();
+  localStorage.setItem("cartItems", JSON.stringify(jacket.id));
 
-  console.log(jacket);
+
+  console.log(localStorage.setItem);
 
 });
 }
 buttonEvent();
 
   
-localStorage.setItem("cartItems", JSON.stringify(buttonEvent));
-
 //Is the jacket on sale ?
 let priceText = document.querySelector(".productPrice2");
 let onSaleText = document.querySelector("#onSaleSection2");

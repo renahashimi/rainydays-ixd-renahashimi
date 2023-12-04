@@ -11,7 +11,7 @@ const cartSiteName = document.querySelector(".cartsitename");
 const backToShop = document.querySelector (".backtoshop");
 const itemsInTotal = document.querySelector(".cartnumber");
 
-console.log(backToShop, inCartItem, cartContent);
+console.log(inCartItem);
 
   cartSiteName.innerHTML += `<h1>SHOPPINGBAG</h1>`;
   cartContent.innerHTML = "";
@@ -25,6 +25,7 @@ console.log(backToShop, inCartItem, cartContent);
 
 
 if (!inCartItem) {
+  localStorage.getItem("cartItems");
   cartContent.innerHTML += `<div><p class="noitems">No products in cart</p></div>`;
   //itemsInTotal.innerHTML = `<p class="cartitemnumber"> ${inCartItem.length} </p>`;
 
