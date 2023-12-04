@@ -736,12 +736,12 @@ body, header, footer{
 }
 
 .contactimg img {
-    width: 400px;
-    height: 520px;
-    object-fit: fill;
-     box-shadow: 25px 10px 20px 0px rgba(0, 0, 0, 0.55);
-     border-radius: 10px;
-     margin-right: 80px;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: 50% 60%;
+    opacity: 85%;
+    margin: -30px 0;
 }
 
 /*CART*/
