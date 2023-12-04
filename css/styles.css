@@ -1631,8 +1631,8 @@ h1 {
 
 .container5 {
     width: 400px;
-    margin-left: 40px;
-    height: 500px;
+   
+    height: 457px;
     border-radius: 10px;
     
 }
@@ -1686,7 +1686,7 @@ h1 {
 }
 
 .name, .email, .phone  {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .mount, .year, .cvv {
@@ -1694,7 +1694,7 @@ h1 {
 }
 
 .m-button {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .content5 {
     margin: 10px;

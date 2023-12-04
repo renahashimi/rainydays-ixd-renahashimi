@@ -716,9 +716,17 @@ body, header, footer{
 
 
 .contactform {
-    display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
+    margin: 20px auto;
+}
+.section1 {
+    width: 270px;
+}
+
+.allcontactpage {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
     margin: 20px;
 }
 
