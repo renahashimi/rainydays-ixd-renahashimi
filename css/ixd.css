@@ -389,6 +389,10 @@
     margin-bottom: 15px;
 }
 
+.contactimg {
+    display: none;
+}
+
 /*CART*/
 
 .cartsitename {
@@ -576,6 +580,8 @@
 
 /*CONTACT*/
 
+
+
 .contactcontainer {
     display: grid;
     grid-template-columns: auto auto;
@@ -704,6 +710,30 @@ body, header, footer{
     height: 200px;
     margin: 190px auto;
     max-width: 1125px;
+}
+
+/*CONTACT*/
+
+
+.contactform {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.contactimg {
+    display: block;
+
+}
+
+.contactimg img {
+    width: 400px;
+    height: 520px;
+    object-fit: fill;
+     box-shadow: 25px 10px 20px 0px rgba(0, 0, 0, 0.55);
+     border-radius: 10px;
+     margin-right: 80px;
 }
 
 /*CART*/
