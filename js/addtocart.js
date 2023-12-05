@@ -7,6 +7,7 @@ const itemsInCart = getCart();
 
 
 const cartContent = document.querySelector(".cartcontainer");
+let cartItems = document.querySelectorAll(".addtocartbtn");
 //const itemsInCart = document.querySelector(".cartnumber");
 
 
@@ -18,7 +19,7 @@ if(!itemsInCart) {
 
 } else {
 
-    
+
 }
 
 

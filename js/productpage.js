@@ -1,7 +1,6 @@
 import { errorMessage } from "./errormessage.js";
 import { likeJackets } from "./like.js";
 import { getCart } from "./data/getCart.js";
-import { addToCart } from "./addToCart.js";
 
 export const params = new URLSearchParams (document.location.search);
 export const id = params.get ("id");
@@ -66,19 +65,48 @@ function createProductInfo (jacket) {
 
 //ADD TO CART
 
-function buttonEvent () {
-let addButton = document.querySelectorAll(".addtocartbtn");
-addButton.forEach((btn) =>{
-  btn.addEventListener("click", addToCart (jacket));
-  getCart();
-  localStorage.setItem("cartItems", JSON.stringify(jacket.id));
 
+let cart = document.querySelectorAll(".addtocartbtn");
+console.log(cart);
 
-  console.log(localStorage.setItem);
+let product = jacket.id;
+console.log(product);
 
-});
+for(let i=0; i<cart.length;i++){
+cart[i].addEventListener("click", () =>{
+  cartItems (product);
+  itemsInCart (product);
+  const cartContent = document.querySelector(".cartcontainer");
+  
+
+})
 }
-buttonEvent();
+
+function cartItems (product){
+localStorage.setItem("cartItems", JSON.stringify(product));
+}
+cartItems()
+
+function itemsInCart() {
+  let inCartItemTotal = localStorage.getItem("itemsInCart");
+  inCartItemTotal = parseInt(inCartItemTotal);
+
+  if (inCartItemTotal) {
+    localStorage.setItem("itemsInCart", inCartItemTotal+1)
+    document.querySelector(".cartnumber").textContent=inCartItemTotal+1;
+
+  } else{
+  localStorage.setItem("itemsInCart", 1);
+  document.querySelector(".cartnumber").textContent=1;
+}
+};
+
+function onLoadItemsIncartNumber () {
+  let inCartItemTotal = localStorage.getItem ("itemsInCart");
+  document.querySelector(".cartnumber").textContent=inCartItemTotal;
+
+}
+onLoadItemsIncartNumber()
 
   
 //Is the jacket on sale ?

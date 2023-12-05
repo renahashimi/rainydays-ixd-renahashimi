@@ -1,17 +1,9 @@
-import { getCart } from "./data/getCart.js";
-import { url } from "./script.js";
-
-
-const inCartItem = getCart();
-
-
 const cartContent = document.querySelector(".cartcontainer");
 const totalPrice = document.querySelector(".totalsum");
 const cartSiteName = document.querySelector(".cartsitename");
 const backToShop = document.querySelector (".backtoshop");
-const itemsInTotal = document.querySelector(".cartnumber");
 
-console.log(inCartItem);
+
 
   cartSiteName.innerHTML += `<h1>SHOPPINGBAG</h1>`;
   cartContent.innerHTML = "";
@@ -23,15 +15,30 @@ console.log(inCartItem);
                               <p><a href="men.html">men</a></p>
                             </div>`;
 
-
-if (!inCartItem) {
-  localStorage.getItem("cartItems");
   cartContent.innerHTML += `<div><p class="noitems">No products in cart</p></div>`;
-  //itemsInTotal.innerHTML = `<p class="cartitemnumber"> ${inCartItem.length} </p>`;
 
 
-}else {
-  inCartItem.forEach(cartItems => {
+
+let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  console.log(cartItems);
+
+export function addToCart (){
+ let image = cartItems[id];
+
+ console.log(image);
+
+
+if (!cartItems) {
+  cartItems = [];
+} else {
+
+  cartItems = JSON.parse(cartItems);
+}
+}
+
+localStorage.setItem("cartItems", JSON.stringify(cartItems));
+ 
+/*    localStorage.getItem("cartItems");
     cartContent.innerHTML += `<div class="cartcontainer" jacket-id="${cartItems.id}
                                      <div class="cartInfo">
                                        <div class="cartcontent">
@@ -43,15 +50,18 @@ if (!inCartItem) {
    
                                            </div>
                                            </div>
-   
+                                           <div class="removebtn">remove</div>   
                                          </a>
                                          </div>
                                </div>`;
- });
+ };
+
+
+
 saveCartItems(cartItems);
 }
 function saveCartItems (cartItems) {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    localStorage.setItem("cartItems", JSON.stringify(product));
 
-};
+};*/
  

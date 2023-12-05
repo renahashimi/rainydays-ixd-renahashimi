@@ -1,10 +1,11 @@
 export function getCart() {
 
-    const cartItems = localStorage.getItem("cartItems");
+    let cart = localStorage.getItem("cartItems");
+
     
-    if (!cartItems) {
-        return null;
-    }
+    if (!cart) {
+        return [];
+    } 
 };
 
 
