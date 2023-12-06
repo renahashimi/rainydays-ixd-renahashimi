@@ -405,26 +405,31 @@
 
 .cartcontainer {
     display: block;
-    min-height: 250px;
+    min-height: 150px;
     max-width: 400px;
     border: 2px solid var(--green);
     width: 90%;
     margin: auto;
 }
 
+.cartcontainer1 {
+    padding: 10px 0;
+    width: 85%;
+    margin: auto;
+}
+
 .cartInfo {
-    display: block;
+    display: flex;
     border:  1px solid var(--green);
     margin: 10px auto;
     width: 95%;
-    max-width: 220px;
     padding-bottom: 20px;
 }
 
 .cartcontent {
-    display: grid;
-    grid-template-columns: 45% 45%;
-    justify-content: space-evenly;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
 }
 
 .cartnumber {
@@ -438,6 +443,34 @@
     width: 20px;
     max-height: 25px;
     text-align: center;
+}
+
+.cartname, .cartprice {
+    font-weight: 500;
+    font-size: 0.8em;
+    width: 95%;
+    margin: 20px;
+}
+
+.cartprice {
+    font-weight: bold;
+}
+
+.cartimage {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 90%;
+    max-width: 80px;
+    min-height: 40px;
+    margin: 5px 0;
+}
+
+.removebtn {
+    height: 30px;
+    margin-top: 20px;
+    background-color: var(--white);
+    border: none;
 }
 
 .noitems {
@@ -474,7 +507,20 @@
     padding-right: 20px;
     font-weight: 300;
     text-transform: uppercase;
-    pointer: coursor;
+    cursor: pointer;
+}
+
+.totalsum {
+    display: flex;
+    margin: 20px auto;
+    border: 4px double var(--red);
+    max-width: 200px;
+    height: 40px;
+}
+
+.totalsum h3 {
+    margin: auto;
+    padding: 5px;
 }
 
 
@@ -587,8 +633,8 @@
     grid-template-columns: auto auto;
 }
 .section1 {
-    max-width: 400px;
-    justify-content: space-between;
+    width: 350px;
+    justify-content: space-evenly;
 }
 
 .rettx {
@@ -758,9 +804,13 @@ body, header, footer{
 
 .cartcontainer {
     margin-top: 40px;
-    min-height: 550px;
+    max-height: 500px;
 }
 
+
+.totalsum {
+    margin-top: 400px;
+}
 
 
 

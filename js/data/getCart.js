@@ -1,15 +1,15 @@
 export function getCart() {
 
-    let cart = localStorage.getItem("cartItems");
+    const cartItems = localStorage.getItem("cartItems");
 
     
-    if (!cart) {
+    if (!cartItems) {
         return [];
-    } 
+    } else {
+        return JSON.parse(cartItems);
+    }
 };
 
-
-/*export function saveCartItems (cartItems) {
+function saveCartItems (cartItems) {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
-  }*/
-
+  }

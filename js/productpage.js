@@ -64,21 +64,19 @@ function createProductInfo (jacket) {
                                   </div>`;
 
 //ADD TO CART
-
+localStorage.setItem("cartItems", [jacket.id, jacket.image]);
 
 let cart = document.querySelectorAll(".addtocartbtn");
 console.log(cart);
 
-let product = jacket.id;
+let product = jacket;
 console.log(product);
 
 for(let i=0; i<cart.length;i++){
 cart[i].addEventListener("click", () =>{
   cartItems (product);
   itemsInCart (product);
-  const cartContent = document.querySelector(".cartcontainer");
-  
-
+  getCart();
 })
 }
 
@@ -89,7 +87,7 @@ cartItems()
 
 function itemsInCart() {
   let inCartItemTotal = localStorage.getItem("itemsInCart");
-  inCartItemTotal = parseInt(inCartItemTotal);
+  inCartItemTotal = JSON.parse(inCartItemTotal);
 
   if (inCartItemTotal) {
     localStorage.setItem("itemsInCart", inCartItemTotal+1)
@@ -99,14 +97,14 @@ function itemsInCart() {
   localStorage.setItem("itemsInCart", 1);
   document.querySelector(".cartnumber").textContent=1;
 }
-};
+}
 
 function onLoadItemsIncartNumber () {
   let inCartItemTotal = localStorage.getItem ("itemsInCart");
   document.querySelector(".cartnumber").textContent=inCartItemTotal;
 
 }
-onLoadItemsIncartNumber()
+onLoadItemsIncartNumber();
 
   
 //Is the jacket on sale ?

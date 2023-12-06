@@ -22,6 +22,202 @@ const totalSum = document.querySelector(".totalsum");
 const removeItem = document.querySelector(".remove");
 
 
+import { getCart } from "./data/getCart.js";
+import { errorMessage } from "./errormessage.js";
+import { apiUrl } from "./script.js";
+import { getApiProduct } from "./data/getapiproductsingle.js";
+
+/*
+fetch(getApiProduct)
+.then(function(response) {
+  return response.json();
+  
+})
+.then(function(data) {
+  localStorage.setItem("cartItems", JSON.stringify(data));
+  if (!localStorage.getItem("cart")) {
+    localStorage.setItem("cart", "[]");
+    
+  }
+});
+*/
+
+
+
+let productInCart = JSON.parse(localStorage.getItem("cartItems"));
+let itemsInCart = JSON.parse(localStorage.getItem("itemsInCart"));
+
+
+const cartContent = document.querySelector(".cartcontainer");
+const totalPrice = document.querySelector(".totalsum");
+const cartSiteName = document.querySelector(".cartsitename");
+const backToShop = document.querySelector (".backtoshop");
+const numberOfItems = document.querySelector (".cartnumber");
+try {
+
+
+  cartSiteName.innerHTML += `<h1>SHOPPINGBAG</h1>`;
+  numberOfItems.innerHTML += `<p>${productInCart.length}</p>`;
+console.log(numberOfItems);
+
+
+  backToShop.innerHTML = "";
+  backToShop.innerHTML += `<div><h2> GO BACK TO </h2>
+                            <div class ="backtoshoplist">                              
+                              <p><a href="women.html">woman</a></p>
+                              <p><a href="index.html">homepage</a></p>
+                              <p><a href="men.html">men</a></p>
+                            </div>`;
+
+  //cartContent.innerHTML += `<div><p class="noitems">No products in cart</p></div>`;
+  //getCart(cartItems);
+
+/*
+  const title = productInCart.title;
+  const image = productInCart.image;
+  const price = productInCart.price;
+  const itemId = productInCart.id;*/
+ //document.querySelector(".cartcontainer").innerHTML = localStorage.getItem("cartItems",);
+
+
+function addToCart (){
+/*let cartContent = JSON.getItem("cartItems", product);*/
+let total = 0;
+if (productInCart!==null) {
+   cartContent.innerHTML += `<div><p class="noitems">No products in cart</p></div>`;
+
+} else {
+
+
+productInCart.forEach(cart => {
+  cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${cart.id}
+  <div class="cartInfo">
+    <div class="cartcontent">
+      <div class="cartimage" <img src="url(${cart.image})" alt"${cart.title} cover"></div>
+
+        <div>
+          <h2 class="productname">${cart.title}</h2>
+          <p class="productPrice">$${cart.price}</p>
+
+        </div>
+        </div>
+        <div class="removebtn">remove</div>   
+      </a>
+      </div>
+</div>`;
+  
+});
+
+};
+
+
+
+
+
+/*
+  let cartItems = JSON.parse(localStorage.getItem("cartItems"));
+cartItems.forEach(cart => {
+
+
+  
+  
+});*/
+}  
+
+
+addToCart();
+}catch(error) {
+  console.log("Unknown error", error);
+  cartContent.innerHTML = errorMessage();
+}
+
+
+
+/*
+let total = 0;
+
+cartItems.forEach(cartItems => {
+  
+  
+});
+
+
+  
+  */
+  /*cartContent.innerHTML += `<div class="cartcontainer" jacket-id="${cartItems.id}
+  <div class="cartInfo">
+    <div class="cartcontent">
+      <div class="cartimage" <img src="url(${cartItems.image})" alt"${cartItems.title} cover"></div>
+
+        <div>
+          <h2 class="productname">${cartItems.title}</h2>
+          <p class="productPrice">$${cartItems.price}</p>
+
+        </div>
+        </div>
+        <div class="removebtn">remove</div>   
+      </a>
+      </div>
+</div>`;
+  
+  
+  
+  
+  
+  
+  
+  
+  cartContent.innerHTML += `<div class="cartcontainer" jacket-id="${jacket.id}
+  <div class="cartInfo">
+    <div class="cartcontent">
+      <div class="cartimage" <img src="url(${jacket.image})" alt"${jacket.title} cover"></div>
+
+        <div>
+          <h2 class="productname">${jacket.title}</h2>
+          <p class="productPrice">$${jacket.price}</p>
+
+        </div>
+        </div>
+        <div class="removebtn">remove</div>   
+      </a>
+      </div>
+</div>`;
+}
+*/
+
+//localStorage.setItem("cartItems", JSON.stringify(cartItems));
+ 
+/*    localStorage.getItem("cartItems");
+    cartContent.innerHTML += `<div class="cartcontainer" jacket-id="${cartItems.id}
+                                     <div class="cartInfo">
+                                       <div class="cartcontent">
+                                         <div class="cartimage" <img src="url(${cartItems.image})" alt"${cartItems.title} cover"></div>
+   
+                                           <div>
+                                             <h2 class="productname">${cartItems.title}</h2>
+                                             <p class="productPrice">$${cartItems.price}</p>
+   
+                                           </div>
+                                           </div>
+                                           <div class="removebtn">remove</div>   
+                                         </a>
+                                         </div>
+                               </div>`;
+ };
+
+
+
+saveCartItems(cartItems);
+}
+*/
+
+/*
+function saveCartItems (cartItems) {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+};*/
+ 
+
 console.log(productId);
 
 const cart = [];

@@ -5,13 +5,13 @@ import { getApiProduct } from "./data/getapiproductsingle.js";
 
 const itemsInCart = getCart();
 
-
+console.log(itemsInCart);
 const cartContent = document.querySelector(".cartcontainer");
 let cartItems = document.querySelectorAll(".addtocartbtn");
 //const itemsInCart = document.querySelector(".cartnumber");
 
 
-export function addToCart() {
+function addToCart() {
 
 if(!itemsInCart) {
    const cartItems = localStorage.getItem("cartItems");

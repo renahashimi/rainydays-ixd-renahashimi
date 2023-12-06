@@ -118,7 +118,7 @@ body header {
     background-color: #fff;
     flex-direction: column;
     width: 100%;
-    margin: -10px 0 0 -35px;
+    margin: -10px 0 0 -10px;
     text-align: center;
     background-color: #fff;
     border-bottom: 4px solid #0A3641;
@@ -350,13 +350,14 @@ label {
 
 .container5 {
     display: block;
-    width: 80%;
+    width: 90%;
     max-width: 400px;
     height: auto;
     align-items: center;
     justify-content: center;
     margin: auto;
     border: 1px solid #0A3641;
+    border-radius: 10px;
     box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 35);
 }
 
@@ -375,7 +376,7 @@ label {
 .c-form {
     display: flexbox;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     padding: 20px;
     font-size: 0.8em;
 
@@ -395,11 +396,14 @@ label {
 
 form textarea {
     font-size: 1em;
-    width: 90%;
     outline: none;
     justify-content: center;
     margin: 10px;
     border: 1px solid #0A3641;
+}
+
+.message {
+    width: 90%;
 }
 
 .m-button {
@@ -519,6 +523,7 @@ form textarea {
     flex-shrink: 2;
     color: #0A3641;
     width: 90%;
+    margin: auto;
 }
 
 .cform-l {
@@ -548,6 +553,7 @@ form textarea {
     flex-direction: column;
     color: #0A3641;
     width: 90%;
+    margin: auto;
 }
 
 .creditnr {
@@ -723,6 +729,7 @@ form textarea {
     border: 1px solid var(--green);
     border-radius: 20px;
     width: 90%;
+    max-width: 300px;
     color: var(--green);
     margin: auto auto 30px;
 }
@@ -1277,23 +1284,14 @@ h1 {
 }
 
 .ma-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: block;
     margin: 0px auto;
     padding-bottom: 30px;
     max-width: 600px;
     justify-content: center;
 }
-
 .ma-form {
     border: none;
-    margin: 10px;
-    width: 300px;
-}
-
-.mah1 {
-    text-align: left;
-    margin: 0 30px;
 }
 
 .email-ma, .password-ma {
@@ -1307,15 +1305,10 @@ h1 {
 
 .ma-join {
     font-size: 0.9em;
-    font-weight: 500;
-    margin: 20px 0;
-    width: 250px;
+    font-weight: 800;
+    width: 100%;
 }
 
-.ma-form2, .email-ma2, .ma-form2 .ma-l {
-    margin: 0;
-    padding-left: 20px;
-}
 
 .ma-form2 .ma-l{
     padding: 0;
@@ -1324,8 +1317,9 @@ h1 {
 .formimg {
     display: block;
     visibility: visible;
+    margin: auto;
     width: 90%;
-    height: 150px;
+    height: 250px;
     object-fit: cover;
     border-radius: 22px;
     opacity: 80%;
@@ -1631,13 +1625,12 @@ h1 {
 
 .container5 {
     width: 400px;
-    height: 430px;
+    height: 412px;
     border-radius: 10px;
     
 }
 .bi-text {
-    text-align: left;
-    margin-left: 65px;
+    text-align: center;
     font-weight: 900;
 }
 
