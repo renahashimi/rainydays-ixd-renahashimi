@@ -1,34 +1,24 @@
 import { getCart } from "./data/getCart.js";
 import { url } from "./script.js";
 import { getApiProduct } from "./data/getapiproductsingle.js";
+import { apiUrl } from "./script.js";
 
 
-const itemsInCart = getCart();
-
-console.log(itemsInCart);
-const cartContent = document.querySelector(".cartcontainer");
-let cartItems = document.querySelectorAll(".addtocartbtn");
-//const itemsInCart = document.querySelector(".cartnumber");
-
-
-function addToCart() {
-
-if(!itemsInCart) {
-   const cartItems = localStorage.getItem("cartItems");
-    
-
-} else {
+fetch(getApiProduct)
+.then(function(response) {
+    return response.json();
+})
+.then(function(data){
+    localStorage.setItem("cartItems", JSON.stringify(data));
+    if (!localStorage.getItem("cart")) {
+        localStorage.setItem("cart", "[]");
+    } 
+})
 
 
-}
 
 
-}
 
-addToCart ();
-/*function saveCartItems (cartItems) {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
-};*/
+function addToCart() {}
 
 

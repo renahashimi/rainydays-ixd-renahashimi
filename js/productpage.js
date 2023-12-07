@@ -84,11 +84,10 @@ function cartItems (product){
 localStorage.setItem("cartItems", JSON.stringify(product));
 }
 cartItems()
-
+/*
 function itemsInCart() {
   let inCartItemTotal = localStorage.getItem("itemsInCart");
-  inCartItemTotal = JSON.parse(inCartItemTotal);
-
+  inCartItemTotal = JSON.parse(inCartItemTotal)
   if (inCartItemTotal) {
     localStorage.setItem("itemsInCart", inCartItemTotal+1)
     document.querySelector(".cartnumber").textContent=inCartItemTotal+1;
@@ -105,7 +104,7 @@ function onLoadItemsIncartNumber () {
 
 }
 onLoadItemsIncartNumber();
-
+*/
   
 //Is the jacket on sale ?
 let priceText = document.querySelector(".productPrice2");

@@ -40,21 +40,15 @@ function addToCart (){
   const price = cartItems.price;
   const id = cartItems.id;
 
-
-  console.log(cartItems.title);
-
   const item = {id, title , image, price};
   localStorage.setItem("cartItems", JSON.stringify(item));
 
-  console.log(item);
-
-  if (!cartItems) {
-    cartItems = [];
-    cartContent.innerHTML += `<div><p class="noitems">No products in cart</p></div>`;
-  } 
 
 
-  cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
+
+
+  if (cartItems) {
+     cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
   <div class="cartInfo">
     <div class="cartcontent">
           <div class="cartimage" style="background-image: url(${item.image})" alt"${item.title}"></div>
@@ -69,9 +63,9 @@ function addToCart (){
       </div>
     </div
 </div>`;
-
-
-
+} else {
+  cartContent.innerHTML += `<p>No products in cart</p>`;
+}
 
 let totalSum = +item.price;
 total += totalSum;
@@ -80,17 +74,15 @@ total = total.toFixed(2);
 totalPrice.innerHTML += `<h3>$${total}</h3>`;
 
 
-
-
-function removeItem(){
-  document.querySelector(".removebtn") = localStorage.removeItem("cartItems", item);
+/*
+function removeItem(item){
+  document.querySelector(".removebtn") = localStorage.removeItem("cartItems");
 }
+removeItem()
+*/
 
 }
-
 addToCart(); 
 
 
 localStorage.setItem("cartItems", JSON.stringify(cartItems));
-
- 

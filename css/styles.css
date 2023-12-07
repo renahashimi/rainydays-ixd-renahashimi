@@ -15,7 +15,7 @@ body main, body header {
 }
 
 main {
-    margin: 100px 0 20px;
+    margin: 112px 0 20px;
 }
 
 ul, ol, a {
@@ -41,7 +41,7 @@ h1 {
     justify-content: center;
     text-transform: uppercase;
     margin: 20px 0 30px;  
-    padding: 20px 0; 
+    padding: 15px 0; 
     width: 100%;
     color: #0A3641;
     text-align: center;
@@ -72,7 +72,7 @@ body header {
     width: 100%;
     max-width: 1100px;
     height: 95px;
-    margin: -100px -8px;
+    margin: -115px -8px;
     padding: 0;
     background-color: var(--white);
     border-bottom: 1px solid var(--green);
@@ -84,6 +84,7 @@ body header {
     max-width: 90px;
     height: auto;
     margin: 20px auto;
+    padding-left: 15px;
 }
 
 .headlogo1 {
@@ -918,6 +919,10 @@ header {
 .nav2 a {
     font-size: 1.5em;
 }
+
+.nav4 {
+    margin-right: 15px;
+}
     
 
 /*Index & Home*/  
@@ -1070,11 +1075,21 @@ header {
 /*All html*/
 
 h1 {
-    font-size: 1.9em;
+    font-size: 1.6em;
+}
+
+main {
+    margin-top: 120px;
 }
 
 
-/*Header*/    
+/*Header*/  
+
+body header {
+    margin-top: -125px;
+    height: 110px;
+}
+
 
 .headlogo {
     min-width: 110px;
@@ -1084,6 +1099,9 @@ h1 {
 
 .nav2 a {
     font-size: 1.4em;
+}
+.nav4 {
+    margin-right: 20px;
 }
 
 
@@ -1099,7 +1117,7 @@ h1 {
 
 .women a, .men a {
     font-size: 3em;
-    padding: 20px;
+    padding: 0px;
     margin: 20px;
     width: 240px;
 }
@@ -1392,7 +1410,7 @@ h1 {
 
 .headlogo1 {
     display: block;
-    width: 130px;
+    width: 110px;
     margin: 20px 30px;
 }
 
@@ -1402,11 +1420,16 @@ h1 {
 
 .bag, .profile {
     scale: 1.8;
+    padding: 0 15px;
 }
 
 .hide {
     display: none;
 } 
+
+.nav4 {
+    margin: 20px auto 0;
+}
     
 .nav1 {
     display: block;
@@ -1470,7 +1493,7 @@ h1 {
 }
 
 .productWoman, .productMen {
-    font-size: 2em;
+    font-size: 1.7em;
 }
 
 .sf {

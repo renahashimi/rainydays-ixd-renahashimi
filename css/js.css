@@ -467,6 +467,12 @@ select {
     grid-template-columns: repeat(3, auto);
 }
 
+.productMen, .productWoman {
+    padding: 0 0 20px;
+    font-size: 1.6em;
+    
+}
+
 
 /*Product (PRODUCTPAGE)*/
 
