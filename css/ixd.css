@@ -503,6 +503,11 @@
     border: none;
 }
 
+.oscart {
+    text-align: center;
+    margin: 5px auto;
+}
+
 .noitems {
     display: block;
     font-size: 1.2em;

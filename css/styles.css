@@ -818,6 +818,9 @@ footer {
 
 .foot1 p {
     margin: 2px 0;
+    list-style: none;
+    color: var(--green);
+    font-size: 0.9em;
 }
 
 
@@ -889,6 +892,14 @@ header {
 label {
     display: flex;
     margin: 30px 30px;
+}
+
+.foot1 p {
+    font-size: 1em;
+}
+
+.foot-lname {
+    margin-top: -10px;
 }
     
 }
@@ -989,7 +1000,7 @@ header {
 
 
 
-/*Contact*/
+/*Footer*/
 
 
 .foot-lname {
@@ -1055,12 +1066,12 @@ header {
 }
 
 .foot-logo {
-    width: 60px;
+    width: 50px;
     scale: 2;
 }
 
 .foot-lname {
-    margin-right: 5px;
+    margin-right: 15px;
     margin-top: -3px;
 }
 
@@ -1309,7 +1320,7 @@ body header {
     justify-content: center;
 }
 .ma-form {
-    border: none;
+    max-width: 550px;
 }
 
 .email-ma, .password-ma {
@@ -1362,15 +1373,13 @@ body header {
 
 .foot-logo {
     justify-content: right;
-    width: 80px;
     scale: 2.4;
     margin: auto;
-    margin-left: 30px;
 }
 
 .foot-lname {
-    font-size: 1.3em;
-    margin: 2px 20px;
+    font-size: 1.1em;
+    margin: 10px 0px;
 }
 
 .foot-content {
@@ -1805,7 +1814,7 @@ h1 {
 }
 
 .ma-form {
-    margin: 0 30px;
+    margin: -10px 30px;
     border: none;
 }
 
@@ -1817,7 +1826,6 @@ h1 {
     object-fit: cover;
     opacity: 80%;
     border-radius: 30px;
-
 }
 
 .ma-join {
@@ -1829,12 +1837,14 @@ h1 {
 .email-ma, .password-ma {
     font-size: 0.8em;
     width: 60%;
+    height: 25px;
 }
     
 .email-ma2 {
     width: 50%;
     font-size: 0.8em;
     margin: 0;
+    height: 27px;
 }
 
 .ma-form2 .ma-l {
@@ -1865,19 +1875,19 @@ footer {
 }
 
 .footlogo {
-    width: 130px;
+    width: 110px;
     margin-bottom: 40px; 
     margin-right: 20px;
 }
 
 .foot-logo {
-    scale: 2.8;
-    margin-left: 60px;
+    scale: 2.4;
+   margin: 0 auto;
 }
 
 .foot-lname {
-    font-size: 1.6em;
-    margin-top: -80px;
+    font-size: 1.2em;
+    margin: -80px auto;
 }
 
 }
