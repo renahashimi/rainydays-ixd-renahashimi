@@ -384,6 +384,10 @@ label {
 
 }
 
+.ch-form label, .ch-form2 label {
+    display: none;
+}
+
 .name, .email, .phone {
     display: block;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
