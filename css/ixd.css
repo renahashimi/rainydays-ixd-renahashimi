@@ -402,8 +402,8 @@
     padding: 0 10px 10px;
 }
 
-.section1 label {
-    display: none;
+.refnumber1 {
+     margin: 5px 50px;
 }
 
 #refnumber{
@@ -732,6 +732,7 @@
     display: grid;
     grid-template-columns: auto auto;
 }
+
 .section1 {
     width: 350px;
     justify-content: space-evenly;
@@ -886,6 +887,10 @@ body, header, footer{
     width: 270px;
 }
 
+.refnumber1 {
+    margin: 5px 38px;
+}
+
 .allcontactpage {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -894,7 +899,6 @@ body, header, footer{
 
 .contactimg {
     display: block;
-
 }
 
 .contactimg img {
