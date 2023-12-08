@@ -400,7 +400,7 @@ form textarea {
     font-size: 1em;
     outline: none;
     justify-content: center;
-    margin: 10px;
+    margin: 5px 10px;
     border: 1px solid #0A3641;
 }
 
@@ -1623,6 +1623,10 @@ h1 {
 
 .content4  {
     margin: 5px;
+}
+
+.c-form {
+    padding: 0 20px;
 }
 
 .line-y {
