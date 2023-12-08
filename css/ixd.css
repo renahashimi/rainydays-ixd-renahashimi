@@ -55,7 +55,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px var(--green);
-    margin: -20px auto 0;
+    margin: -10px auto 0;
     padding-bottom: 10px;
     text-align: center;
 } 
