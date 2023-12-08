@@ -484,7 +484,8 @@
     font-weight: 500;
     font-size: 0.8em;
     width: 100%;
-    margin: 20px 10px;
+    margin: 20px 5px;
+    padding: 0 5px;
 }
 
 .cartprice {
