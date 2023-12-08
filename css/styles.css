@@ -1,7 +1,7 @@
 :root {
     --green: #0A3641;
     --white: #fff;
-}
+} 
 
 body {  
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -61,6 +61,7 @@ h2, h3, h4  {
 button {
     cursor: pointer;
 }
+
 
 
 /*Header*/
@@ -1120,9 +1121,10 @@ body header {
 /*Index & Home*/
 
 .background1 img {
-    height: 450px;
+    height: 500px;
+    margin-top: -10px;
 }
- 
+
 .women, .men {
     margin: 10px 20px;
 }   
@@ -1487,8 +1489,8 @@ h1 {
 .background1 img {
     height: 100%;
     border: 4px solid var(--white);
-}
-    
+    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.97);
+}    
 .women, .men {
     margin: 50px 40px;
     padding: 10px;
