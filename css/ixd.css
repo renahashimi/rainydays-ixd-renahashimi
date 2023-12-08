@@ -344,6 +344,7 @@
 }
 
 .outlettx .outlet-so {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
     font-size: 1.4em;
     font-weight: lighter;
@@ -872,6 +873,10 @@ body, header, footer{
     display: grid;
     grid-template-columns: repeat(3, auto);
     margin: 100px;
+}
+
+.outlettx .outlet-so {
+    font-size: 1.6em;
 }
 
 .outlettx::after {
