@@ -84,7 +84,7 @@
     width: 100px;
     min-height: 100px;
     border-radius: 50%;
-    border: 2px solid var(--green);
+    border: 1px solid var(--green);
     object-fit: cover;
     object-position: 25%;
     filter: drop-shadow(0 -3mm 4mm rgb(0, 1, 2));
