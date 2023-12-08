@@ -225,9 +225,9 @@
 }
 
 .raintx {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: absolute;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;    font-size: 1.2em;    position: absolute;
     color: var(--white);
+    font-weight: 700;
     font-size: 0.8em;
     margin: auto;
     text-align: center;
