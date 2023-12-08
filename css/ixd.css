@@ -16,6 +16,7 @@
 
 .navoutlet a {
     color: var(--red);
+    -webkit-text-stroke: 1px #000;
 }
 
 .undernav {
@@ -269,6 +270,7 @@
     color: var(--red);
     margin-bottom: 0;
     padding-bottom: 0;
+    -webkit-text-stroke: 1px #000;
 }
 
 .saleInfo-outlet {
@@ -288,6 +290,7 @@
     color: var(--green);
     margin: 15px auto;
     max-width: 60%;
+    height: 60px;
 }
 
 .outletimage {
@@ -332,6 +335,7 @@
 .outlettx p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: var(--red); 
+    -webkit-text-stroke: 1px #000;
 }
 
 .outlettx span {
@@ -344,6 +348,7 @@
     font-size: 1.4em;
     font-weight: lighter;
     margin: 15px;
+    -webkit-text-stroke: 1px #000;
 }
 
 .outlet-so {
