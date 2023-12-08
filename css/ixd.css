@@ -21,7 +21,7 @@
 .undernav {
     display: flex;
     background-color: var(--green);
-    height: 20px;
+    height: 22px;
     position: fixed;
     z-index: -2;
     margin: 90px auto;
