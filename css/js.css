@@ -470,7 +470,11 @@ select {
 .productMen, .productWoman {
     padding: 0 0 20px;
     font-size: 1.6em;
-    
+  
+}
+
+.jacketContainer {
+    padding: 0 10px;
 }
 
 
@@ -553,6 +557,10 @@ select {
 .productSection, .productSectionMen {
     display: grid;
     grid-template-columns: repeat(3, auto);
+}
+
+.jacketContainer {
+    padding: 0 10px;
 }
    
 

@@ -872,7 +872,7 @@ body, header, footer{
 .outletcontent {
     display: grid;
     grid-template-columns: repeat(3, auto);
-    margin: 100px;
+    margin: 100px 0 0;
 }
 
 .outlettx .outlet-so {
