@@ -409,13 +409,14 @@
 }
 
 .rettx {
-    width: 70%;
-    margin: 20px auto;
+    width: 80%;
+    margin: 5px auto 20px;
 }
 
 .section1 {
     border: 1px solid var(--green);
     width: 90%;
+    height: 190px;
     max-width: 350px;
     margin: 20px auto;
     text-align: center;
@@ -924,6 +925,11 @@ body, header, footer{
     justify-content: space-between;
     margin: 20px auto;
 }
+
+.rettx {
+    width: 90%;
+}
+
 .section1 {
     width: 270px;
 }
