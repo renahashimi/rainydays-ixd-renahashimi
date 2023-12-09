@@ -1,8 +1,3 @@
-import { getCart } from "./data/getCart.js";
-import { errorMessage } from "./errormessage.js";
-
-
-
 let cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
 
@@ -45,8 +40,6 @@ function addToCart (){
 
 
 
-
-
   if (cartItems) {
      cartContent.innerHTML += `<div class="cartcontainer1" jacket-id="${item.id}>
   <div class="cartInfo">
@@ -63,9 +56,11 @@ function addToCart (){
       </div>
     </div
 </div>`;
-} else {
+} 
+
+/*else {
   cartContent.innerHTML += `<p>No products in cart</p>`;
-}
+}*/
 
 let totalSum = +item.price;
 total += totalSum;
@@ -75,14 +70,21 @@ totalPrice.innerHTML += `<h3>$${total}</h3>`;
 
 
 /*
-function removeItem(item){
+function removeItem(){
   document.querySelector(".removebtn") = localStorage.removeItem("cartItems");
 }
 removeItem()
-*/
+
+function cartNumber () {
+  if (cartItems) {
+    document.querySelector(".cardnumber").textContent = cartContent;
+
+  }
+}*/
+
 
 }
 addToCart(); 
 
 
-localStorage.setItem("cartItems", JSON.stringify(cartItems));
+localStorage.setItem("cartItems", JSON.stringify(item));

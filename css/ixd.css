@@ -471,6 +471,7 @@
     min-height: 100px;
     margin: auto;
     justify-content: space-between;
+    max-width: 350px;
 }
 
 .cartnumber {
@@ -488,14 +489,15 @@
 
 .cartname, .cartprice {
     font-weight: 500;
-    font-size: 0.8em;
+    font-size: 0.7em;
     width: 100%;
-    margin: 20px 5px;
-    padding: 0 5px;
+    margin: 25px 0;
+    padding: 0;
 }
 
 .cartprice {
     font-weight: bold;
+    margin-top: -15px;
 }
 
 .cartimage {
@@ -503,14 +505,14 @@
     background-size: contain;
     background-position: center;
     width: 90%;
-    max-width: 80px;
+    max-width: 50px;
     min-height: 40px;
-    margin: 5px 0;
+    margin: 0 5px;
 }
 
 .removebtn {
     height: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
     background-color: var(--white);
     border: none;
 }
