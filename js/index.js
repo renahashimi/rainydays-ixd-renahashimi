@@ -40,6 +40,7 @@ async function getData() {
                                               <a href="product.html?id=${jacket[i].id}"class="salejacket>
                                                 <div class="saleBox2"> 
                                                   <div class="saleimage2" style="background-image: url(${jacket[i].image})" alt"${jacket[i].title}"></div>
+                                                  <div><h2 class="salename">${jacket[i].title}</h2></div>
                                                   <p class="salepricefull-na">${"$" + jacket[i].price}</p><div>
                                                 </div>   
                                               </a>  
@@ -55,8 +56,10 @@ async function getData() {
                                         <a href="product.html?id=${jacket[i].id}"class="salejacket>
                                           <div class="saleBox"> 
                                             <div class="saleimage" style="background-image: url(${jacket[i].image})" alt"${jacket[i].title}"></div>
-                                            <p class="salepricefull">${"$" + jacket[i].price}</p><div>
-                                            <p class="saleprice">${"$" + jacket[i].discountedPrice}</p><div>
+                                            <div><h2 class="salename">${jacket[i].title}</h2></div>
+                                            <div class= prices">
+                                              <p class="salepricefull">${"$" + jacket[i].price}</p><div>
+                                              <p class="saleprice">${"$" + jacket[i].discountedPrice}</p><div>
                                           </div>   
                                         </a>  
                                       </div>`;                                                               

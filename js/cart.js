@@ -87,4 +87,4 @@ function cartNumber () {
 addToCart(); 
 
 
-localStorage.setItem("cartItems", JSON.stringify(item));
+localStorage.setItem("cartItems", JSON.stringify(cartItems));
